@@ -52,6 +52,9 @@ The **VM Conversion extension** provides the following key features:
 
 :::image type="content" source="media/use/migrate-vmware-to-hyper-v-overview/supported-scenario-topology.png" alt-text="Diagram showing the supported scenario topology for VM migration from VMware vCenter to Hyper-V through Windows Admin Center.":::
 
+> [!Note]
+> **Best practice:** Deploy the Windows Admin Center gateway in the same site as the ESXi and Hyper-V hosts for VM conversion. This ensures minimal WAN traffic, lower latency, and a reliable migration experience.
+
 ## Prerequisites
 
 Before you begin, review the prerequisites and ensure your environment meets the requirements.
@@ -135,10 +138,6 @@ RHEL-based operating systems:
 - Red Hat Linux 9.0
 
 For Linux guests, Hyper-V drivers must be installed before initiating migration. The Hyper-V drivers are essential to ensure successful post-migration boot.
-
-> [!Note]
-> **Best practice:** For optimal performance and reliability in geographically distributed environments, deploy the Windows Admin Center gateway in the same site as the ESXi and Hyper-V hosts involved in VM conversion.  
-> Co-locating the gateway helps minimize WAN traffic, reduce latency, and ensure a smoother VM migration experience.
 
 ---
 ## Install the VM Conversion (Preview) extension in Windows Admin Center
