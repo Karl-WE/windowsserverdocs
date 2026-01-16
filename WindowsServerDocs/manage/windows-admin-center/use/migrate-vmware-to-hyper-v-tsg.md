@@ -16,7 +16,7 @@ This article provides troubleshooting steps for common issues encountered when u
 >[!NOTE]
 >For issues or questions not covered in this documentation, you can submit feedback [here](https://github.com/MicrosoftDocs/Windows-Admin-Center-Ideas-and-Feedback).
 
-### Issue 1: VM resync/remigrate required, or migration stuck at a certain percentage (session timeout)
+## Issue 1: VM resync/remigrate required, or migration stuck at a certain percentage (session timeout)
 
 **Symptom:**
 
@@ -32,7 +32,9 @@ This article provides troubleshooting steps for common issues encountered when u
 
 1. If the VM already exists in **Hyper-V Manager**, delete it before reinitiating the migration.
 
-### Issue 2: Cancel VM synchronization or migration in progress
+---
+
+## Issue 2: Cancel VM synchronization or migration in progress
 
 **Symptom:**
 
@@ -50,7 +52,9 @@ Cancellation isn't supported directly in the extension. As a workaround:
    - `C:\Program Files\Windows Admin Center\Service\migrationStatus.json`
    - `C:\Program Files\Windows Admin Center\Service\syncStatus.json`
 
-### Issue 3: Migration precheck fails with error
+---
+
+## Issue 3: Migration precheck fails with error
 
 **Error message:**
 
@@ -60,7 +64,9 @@ Cancellation isn't supported directly in the extension. As a workaround:
 
 - Ensure there are no **failed virtual machines** present on the same destination server.
 
-### Issue 4: Static IP Configuration Is Not Preserved Without Guest Credentials
+---
+
+## Issue 4: Static IP Configuration Is Not Preserved Without Guest Credentials
 
 **Scenario:**
 
@@ -103,7 +109,9 @@ Use the following workflow to preserve static IP configuration without providing
    .\Prepare-MigratedVM.ps1 -StaticIPMigration -Verbose
    ```
 
-### Issue 5: Synchronization Fails Due to an Invalid Change ID
+---
+
+## Issue 5: Synchronization Fails Due to an Invalid Change ID
 
 **Error Message:**
 
