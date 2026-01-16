@@ -19,13 +19,13 @@ The VM Conversion Extension helps you migrate VMware virtual machines to Hyper-V
 
 ## [Version 1.8.6](https://dev.azure.com/WindowsAdminCenter/Windows%20Admin%20Center%20Feed/_artifacts/feed/wac-public-extensions/NuGet/msft.sme.vm-conversion/overview/1.8.6) (January 2026)
 
-## Improvements
+### Improvements
 
 - Improved pre-check validation by ensuring Change Block Tracking (CBT) is enabled before synchronization readiness checks.
 
 - Enhanced VM creation to correctly refresh and apply CPU, memory, and operating system settings when values were incomplete or invalid.
 
-## Bug fixes - Version 1.8.6
+### Bug fixes - Version 1.8.6
 
 - Fixed an issue that could block migrations when required change tracking information was missing.
 
@@ -37,40 +37,40 @@ The VM Conversion Extension helps you migrate VMware virtual machines to Hyper-V
 
 ## [Version 1.8.5](https://dev.azure.com/WindowsAdminCenter/Windows%20Admin%20Center%20Feed/_artifacts/feed/wac-public-extensions/NuGet/msft.sme.vm-conversion/overview/1.8.5) (December 2025)
 
-## New Features & Enhancements
+### New Features & Enhancements
 
-### Secure Boot Configuration Reliability
+#### Secure Boot Configuration Reliability
 - Implemented logic to power off the VM automatically before applying Secure Boot settings.
 - Resolves failures that occurred when Secure Boot was configured on a running VM.
 
-### Early Change ID Validation
+#### Early Change ID Validation
 - Added prevalidation for missing disk Change IDs.
 - Provides clear and early error messaging, avoiding unexpected failures later in the workflow.
 
-### Power State Alignment
+#### Power State Alignment
 - Ensures the destination VMs power state consistently matches the source VM’s final power state after migration.
     - If the source VM is off and migration succeeds → destination VM remains off.
     - If the source VM is off and migration fails → source VM remains off.
 
-### Enhanced Synchronization Experience
+#### Enhanced Synchronization Experience
 - Introduced asynchronous file-path validation in the Synchronization Confirmation dialog.
 - Reduces UI blocking and improves responsiveness during sync initiation.
 
-### Telemetry Improvements
+#### Telemetry Improvements
 - Added additional telemetry signals to improve:
     - Performance analysis
     - Workflow reliability tracking
     - Troubleshooting efficiency
 
-### Security Improvements
+#### Security Improvements
 - Implemented log sanitization in the PowerShell layer to mask sensitive data.
 - Ensures secure handling of credentials across logs and event traces.
 
-### VM List Component Update
+#### VM List Component Update
 - Reduced the VM synchronization and migration limit from 50 to 10 to improve reliability.
 - Updated corresponding error and guidance messages to reflect the new threshold.
 
-## Bug fixes - Version 1.8.5
+### Bug fixes - Version 1.8.5
 
 - Fixed an issue where powering on a VM resulted in the error: 'Validation failed for one or more fields.'
 - Resolved an issue causing: 'Failed to create destination VM: cpuCount must be a positive number.'
@@ -80,16 +80,16 @@ The VM Conversion Extension helps you migrate VMware virtual machines to Hyper-V
 
 ## [Version 1.8.3](https://dev.azure.com/WindowsAdminCenter/Windows%20Admin%20Center%20Feed/_artifacts/feed/wac-public-extensions/NuGet/msft.sme.vm-conversion/overview/1.8.3) (October 2025)
 
-## New features and enhancements
+### New features and enhancements
 
-### PowerCLI installation support
+#### PowerCLI installation support
 - Added a **PowerCLI installation option** on the landing page to help users set up required component on the gateway.  
 - Introduced an **alert banner** on the VM List and vSphere List pages that notifies users if PowerCLI is missing, with a direct link to install it.
 
-### Migration workflow improvements
+#### Migration workflow improvements
 - Improved stability, validation, and error handling for a smoother migration experience.
 
-## Bug fixes - Version 1.8.4
+### Bug fixes - Version 1.8.4
 - Fixed an issue where the **Submit** button in the vCenter credentials dialog could remain disabled after a failure.  
 - Resolved a problem where migrations could get stuck at **80% progress**.  
 
