@@ -9,7 +9,7 @@ ms.date: 01/16/2026
 
 ---
 
-# Release notes for VM Conversion Extension
+# What's new with VM Conversion Extension
 
 This article provides release notes for the VM Conversion Extension in Windows Admin Center. Use these notes to learn about new features, enhancements, and bug fixes in each version.
 
