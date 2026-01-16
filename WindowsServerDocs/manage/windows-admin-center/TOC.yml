@@ -67,9 +67,9 @@
       href: use/manage-aws-machines.md
     - name: Migrate VMware virtual machines to Hyper-V (preview)
       items:
-      - name: Overview of migrating VMware VMs to Hyper-V
+      - name: Overview of VMware to Hyper-V migration
         href: use/migrate-vmware-to-hyper-v-overview.md
-      - name: What's new in VMware to Hyper-V migration
+      - name: What's new in VM Conversion Extension
         href: use/migrate-vmware-to-hyper-v-whats-new.md
     - name: Virtualization Mode (preview)
       items:
