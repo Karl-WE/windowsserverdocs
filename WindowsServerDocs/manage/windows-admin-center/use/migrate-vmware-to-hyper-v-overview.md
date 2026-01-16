@@ -663,5 +663,3 @@ For more information about CBT limitations and troubleshooting guidance, see the
 **Best Practice**
 
 Validate CBT health on the source virtual machine before starting synchronization, especially after snapshot operations or virtual machine configuration changes.
-
----

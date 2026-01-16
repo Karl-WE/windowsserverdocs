@@ -179,5 +179,3 @@ The VM Conversion Extension helps you migrate VMware virtual machines to Hyper-V
 - **Windows VMs** - VMware Tools batch uninstall is supported only for Windows VMs.  
 
 - **Licensing Note** - Differences in BIOS Serial Number may affect licensing. See [FAQ](migrate-vmware-to-hyper-v-overview.md#frequently-asked-questions) for details.  
-
----
