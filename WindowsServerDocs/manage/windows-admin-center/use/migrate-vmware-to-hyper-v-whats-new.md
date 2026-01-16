@@ -109,7 +109,7 @@ The VM Conversion Extension helps you migrate VMware virtual machines to Hyper-V
   The **“Open in New Window”** icon on the landing page now links directly to the official guide—
   [Migrate VMware Virtual Machines to Hyper-V in Windows Admin Center (Preview)](../use/migrate-vmware-to-hyper-v-overview.md).
 
-## Other Improvements
+### Other Improvements
 
 - Enhanced telemetry for improved diagnostics and secure handling of environment information.
 
@@ -160,7 +160,7 @@ The VM Conversion Extension helps you migrate VMware virtual machines to Hyper-V
 - Improved notification accuracy during migration progress.  
 - Enhanced prechecks for PowerCLI installation to catch failures early and provide clearer troubleshooting guidance.
 
-## User Experience Changes
+### User Experience Changes
 
 - **Session Persistence for Bulk Migration**
 
