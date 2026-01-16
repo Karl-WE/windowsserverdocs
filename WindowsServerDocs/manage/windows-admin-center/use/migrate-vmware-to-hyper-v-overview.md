@@ -50,7 +50,7 @@ The **VM Conversion extension** provides the following key features:
 
 - **Cleanup**: Removes VMware Tools from Windows VMs post-migration.
 
-:::image type="content" source="media/migrate-vmware-to-hyper-v/supported-scenario-topology.png" alt-text="Diagram showing the supported scenario topology for VM migration from VMware vCenter to Hyper-V through Windows Admin Center.":::
+:::image type="content" source="media/use/migrate-vmware-to-hyper-v-overview/supported-scenario-topology.png" alt-text="Diagram showing the supported scenario topology for VM migration from VMware vCenter to Hyper-V through Windows Admin Center.":::
 
 ## Prerequisites
 
@@ -153,7 +153,7 @@ Complete the following steps to install the **VM Conversion** extension.
 
 1. Search for **VM Conversion (Preview)** in **Available extensions** and select **Install.**
 
-    :::image type="content" source="media/migrate-vmware-to-hyper-v/vm-conversion-available-extensions.png" alt-text="Screenshot of the VM Conversion (Preview) extension in the list of all Available extensions." lightbox="media/migrate-vmware-to-hyper-v/vm-conversion-available-extensions.png":::
+    :::image type="content" source="media/use/migrate-vmware-to-hyper-v-overview/vm-conversion-available-extensions.png" alt-text="Screenshot of the VM Conversion (Preview) extension in the list of all Available extensions." lightbox="media/use/migrate-vmware-to-hyper-v-overview/vm-conversion-available-extensions.png":::
 
 1. Once installed, ensure VM Conversion extension is visible in the Windows Admin Center under: **Extensions** > **VM Conversion (Preview)**.
 
@@ -163,11 +163,11 @@ When you first visit the extension, you need to connect your vSphere client endp
 
 1. Select **Connect to vCenter**.
 
-    :::image type="content" source="media/migrate-vmware-to-hyper-v/connect-to-v-center.png" alt-text="Screenshot of the connect to vCenter option." lightbox="media/migrate-vmware-to-hyper-v/connect-to-v-center.png":::
+    :::image type="content" source="media/use/migrate-vmware-to-hyper-v-overview/connect-to-v-center.png" alt-text="Screenshot of the connect to vCenter option." lightbox="media/use/migrate-vmware-to-hyper-v-overview/connect-to-v-center.png":::
 
 1. Enter the vCenter FQDN, vCenter username, and vCenter password.
 
-    :::image type="content" source="media/migrate-vmware-to-hyper-v/configure-vmware-settings.png" alt-text="Screenshot showing how to configure VMware settings." lightbox="media/migrate-vmware-to-hyper-v/configure-vmware-settings.png":::
+    :::image type="content" source="media/use/migrate-vmware-to-hyper-v-overview/configure-vmware-settings.png" alt-text="Screenshot showing how to configure VMware settings." lightbox="media/use/migrate-vmware-to-hyper-v-overview/configure-vmware-settings.png":::
 
 ## Synchronize virtual machines using the VM Conversion (Preview) extension
 
@@ -199,15 +199,15 @@ Complete the following steps to synchronize VMware virtual machines in Windows A
 
 1. In the virtual machine list, select up to 10 virtual machines to synchronize.
 
-    :::image type="content" source="media/migrate-vmware-to-hyper-v/bulk-vm-selection-for-synchronization.png" alt-text="Screenshot of the synchronize tab." lightbox="media/migrate-vmware-to-hyper-v/bulk-vm-selection-for-synchronization.png":::
+    :::image type="content" source="media/use/migrate-vmware-to-hyper-v-overview/bulk-vm-selection-for-synchronization.png" alt-text="Screenshot of the synchronize tab." lightbox="media/use/migrate-vmware-to-hyper-v-overview/bulk-vm-selection-for-synchronization.png":::
 
 1. In the Synchronize VM window, enter in the **Path to store data**. Select **Synchronize**.
 
-    :::image type="content" source="media/migrate-vmware-to-hyper-v/synchronize-vm-path-selection.png" alt-text="Screenshot of the dialog to enter the path to store data and confirm the synchronization can start." lightbox="media/migrate-vmware-to-hyper-v/synchronize-vm-path-selection.png":::
+    :::image type="content" source="media/use/migrate-vmware-to-hyper-v-overview/synchronize-vm-path-selection.png" alt-text="Screenshot of the dialog to enter the path to store data and confirm the synchronization can start." lightbox="media/use/migrate-vmware-to-hyper-v-overview/synchronize-vm-path-selection.png":::
 
 1. You see notifications appear with the progress for: running prechecks, preparing the environment, creating a snapshot, and finalizing synchronization. Confirm that the Hyper-V Virtual Hard Disk (VHDX) file is created in the folder path specified.
 
-    :::image type="content" source="media/migrate-vmware-to-hyper-v/synchronization-in-progress.png" alt-text="Screenshot of the notifications that appear while the synchronization is in progress." lightbox="media/migrate-vmware-to-hyper-v/synchronization-in-progress.png":::
+    :::image type="content" source="media/use/migrate-vmware-to-hyper-v-overview/synchronization-in-progress.png" alt-text="Screenshot of the notifications that appear while the synchronization is in progress." lightbox="media/use/migrate-vmware-to-hyper-v-overview/synchronization-in-progress.png":::
 
 1. Wait for the sync to complete.
 
@@ -233,17 +233,17 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
 
 1. Go to the **Migrate** tab, and select the VM to migrate. Select **Migrate**.
 
-    :::image type="content" source="media/migrate-vmware-to-hyper-v/vm-selection-for-migration.png" alt-text="Screenshot of the migrate tab and virtual machines selected to migrate." lightbox="media/migrate-vmware-to-hyper-v/vm-selection-for-migration.png":::
+    :::image type="content" source="media/use/migrate-vmware-to-hyper-v-overview/vm-selection-for-migration.png" alt-text="Screenshot of the migrate tab and virtual machines selected to migrate." lightbox="media/use/migrate-vmware-to-hyper-v-overview/vm-selection-for-migration.png":::
 
 1. In the Migrate VM window, select **Proceed** to start the migration.
 
-    :::image type="content" source="media/migrate-vmware-to-hyper-v/confirm-migration.png" alt-text="Screenshot of the dialog confirming that the migration can start." lightbox="media/migrate-vmware-to-hyper-v/confirm-migration.png":::
+    :::image type="content" source="media/use/migrate-vmware-to-hyper-v-overview/confirm-migration.png" alt-text="Screenshot of the dialog confirming that the migration can start." lightbox="media/use/migrate-vmware-to-hyper-v-overview/confirm-migration.png":::
 
     During the migration, the following steps are performed: run migration prechecks, ensure sufficient disk space, perform delta replication, power off source VM, execute final delta sync, and import VM into Hyper-V.
 
 1. Wait for virtual machine migration to complete.
 
-    :::image type="content" source="media/migrate-vmware-to-hyper-v/migration-in-progress.png" alt-text="Screenshot of the progress of virtual machine migration." lightbox="media/migrate-vmware-to-hyper-v/migration-in-progress.png":::
+    :::image type="content" source="media/use/migrate-vmware-to-hyper-v-overview/migration-in-progress.png" alt-text="Screenshot of the progress of virtual machine migration." lightbox="media/use/migrate-vmware-to-hyper-v-overview/migration-in-progress.png":::
 
 1. The migrated virtual machine can be managed using the Hyper-V Manager, or in Windows Admin Center.
 
@@ -666,175 +666,3 @@ For more information about CBT limitations and troubleshooting guidance, see the
 Validate CBT health on the source virtual machine before starting synchronization, especially after snapshot operations or virtual machine configuration changes.
 
 ---
-
-## What's new 
-## [Version 1.8.0](https://dev.azure.com/WindowsAdminCenter/Windows%20Admin%20Center%20Feed/_artifacts/feed/wac-public-extensions/NuGet/msft.sme.vm-conversion/overview/1.8.0)  (September 2025)
-
-### New Features
-
-- **Bulk VM Migration with Queuing Support**
-
-    To migrate multiple VMs, select up to **10 virtual machines per operation**. Queuing improves performance and stability during large-scale migrations.  
-
-    >[!NOTE]  
-    >Ensure you remain signed in to Windows Admin Center -> VM Conversion Extension -> vCenter, and refresh your session every 2 hours.  
-    >The browser session must remain active during the final migration step.  
-
-- **Static IP Batch Support**
-
-    Bulk migration now supports **static IP migration** for both **Windows** and **Linux** Virtual Machines. This feature automates network configuration, reducing manual reconfiguration after migration.
-
-- **Batch Uninstall of VMware Tools (Windows VMs)** 
-
-    You can now uninstall VMware Tools from multiple Windows virtual machines in a single batch operation prior to migration, streamlining the preparation process.
-
-    >[!NOTE]
-    >While batch uninstall for Windows VMs is supported, Linux VMs still require manual removal.
-
-- **BIOS UUID Migration**
-
-    The migration process now preserves the BIOS UUID from the source VM, ensuring improved compatibility and identity synchronization on Hyper-V.
-
-    >[!NOTE]
-    >Only the BIOS UUID is migrated. BIOS Serial Number format differs between VMware and Hyper-V, which can affect licensing checks. For more information, see [FAQ](#frequently-asked-questions).
-
-- **Standardized Destination Folder Structure**
-
-    The destination VM folder structure now follows **Hyper-V conventions**. The Synchronization Confirmation dialog displays the folder path, helping administrators verify and predict destination locations.
-
-- **Thick and Thin Disk Provisioning**
-
-    During synchronization, VM disks are created as **thick (fixed)** or **thin (dynamic)** to match the **source VM’s configuration**, optimizing storage use, and simplifying post-migration management.
-
-### Bug fixes - Version 1.8.0
-
-- Resolved migration error: *Physical network adapter 'Ethernet' not found*.  
-- Corrected VM listing issue where VMs already present in **Hyper-V Manager** were incorrectly marked as failed.  
-- Improved notification accuracy during migration progress.  
-- Enhanced prechecks for PowerCLI installation to catch failures early and provide clearer troubleshooting guidance.
-
-## User Experience Changes
-
-- **Session Persistence for Bulk Migration**
-
-  - Stay logged in to Windows Admin Center -> VM Conversion Extension -> vCenter and keep your browser session active throughout migration.
-
-  - The browser session must remain active during the final migration step.
-
-- **Folder Structure Transparency**  
-
-  - Destination folders now directly reflect **Hyper-V layout**.  
- 
-  -  - The Synchronization Confirmation dialog explicitly shows the destination path.
-
-- **Linux VMs** - Install Hyper-V drivers on the guest OS before migration.  
-
-- **Windows VMs** - VMware Tools batch uninstall is supported only for Windows VMs.  
-
-- **Licensing Note** - Differences in BIOS Serial Number may affect licensing. See [FAQ](#frequently-asked-questions) for details.  
-
----
-
-## [Version 1.8.2](https://dev.azure.com/WindowsAdminCenter/Windows%20Admin%20Center%20Feed/_artifacts/feed/wac-public-extensions/NuGet/msft.sme.vm-conversion/overview/1.8.2) (October 2025)
-
-### New Features
-
-- **vCenter Version Display:**  
-  You can now view the vCenter version directly on the **vCenter List** page for easier identification and management.
-
-- **Migration Reconnection Banner:**  
-  A new banner now appears, prompting users to stay signed in and refresh their session every 2 hours during migration to ensure continuity.
-
-- **Quick Access to Documentation:**  
-  The **“Open in New Window”** icon on the landing page now links directly to the official guide—
-  [Migrate VMware Virtual Machines to Hyper-V in Windows Admin Center (Preview)](../use/migrate-vmware-to-hyper-v.md).
-
-## Other Improvements
-
-- Enhanced telemetry for improved diagnostics and secure handling of environment information.
-
----
-
-## [Version 1.8.3](https://dev.azure.com/WindowsAdminCenter/Windows%20Admin%20Center%20Feed/_artifacts/feed/wac-public-extensions/NuGet/msft.sme.vm-conversion/overview/1.8.3) (October 2025)
-
-## New features and enhancements
-
-### PowerCLI installation support
-- Added a **PowerCLI installation option** on the landing page to help users set up required component on the gateway.  
-- Introduced an **alert banner** on the VM List and vSphere List pages that notifies users if PowerCLI is missing, with a direct link to install it.
-
-### Migration workflow improvements
-- Improved stability, validation, and error handling for a smoother migration experience.
-
----
-
-## Bug fixes - Version 1.8.4
-- Fixed an issue where the **Submit** button in the vCenter credentials dialog could remain disabled after a failure.  
-- Resolved a problem where migrations could get stuck at **80% progress**.  
-
----
-
-## [Version 1.8.5](https://dev.azure.com/WindowsAdminCenter/Windows%20Admin%20Center%20Feed/_artifacts/feed/wac-public-extensions/NuGet/msft.sme.vm-conversion/overview/1.8.5) (December 2025)
-
-## New Features & Enhancements
-
-### Secure Boot Configuration Reliability
-- Implemented logic to power off the VM automatically before applying Secure Boot settings.
-- Resolves failures that occurred when Secure Boot was configured on a running VM.
-
-### Early Change ID Validation
-- Added prevalidation for missing disk Change IDs.
-- Provides clear and early error messaging, avoiding unexpected failures later in the workflow.
-
-### Power State Alignment
-- Ensures the destination VMs power state consistently matches the source VM’s final power state after migration.
-    - If the source VM is off and migration succeeds → destination VM remains off.
-    - If the source VM is off and migration fails → source VM remains off.
-
-### Enhanced Synchronization Experience
-- Introduced asynchronous file-path validation in the Synchronization Confirmation dialog.
-- Reduces UI blocking and improves responsiveness during sync initiation.
-
-### Telemetry Improvements
-- Added additional telemetry signals to improve:
-    - Performance analysis
-    - Workflow reliability tracking
-    - Troubleshooting efficiency
-
-### Security Improvements
-- Implemented log sanitization in the PowerShell layer to mask sensitive data.
-- Ensures secure handling of credentials across logs and event traces.
-
-### VM List Component Update
-- Reduced the VM synchronization and migration limit from 50 to 10 to improve reliability.
-- Updated corresponding error and guidance messages to reflect the new threshold.
-
----
-
-## Bug fixes - Version 1.8.5
-
-- Fixed an issue where powering on a VM resulted in the error: 'Validation failed for one or more fields.'
-- Resolved an issue causing: 'Failed to create destination VM: cpuCount must be a positive number.'
-- Addressed a problem where closing the browser mid-migration caused workflows to appear stuck at 80% when returning to Windows Admin Center. The Import VM step now automatically resumes and completes correctly.
-
----
-
-## [Version 1.8.6](https://dev.azure.com/WindowsAdminCenter/Windows%20Admin%20Center%20Feed/_artifacts/feed/wac-public-extensions/NuGet/msft.sme.vm-conversion/overview/1.8.6) (January 2026)
-
-## Improvements
-
-- Improved pre-check validation by ensuring Change Block Tracking (CBT) is enabled before synchronization readiness checks.
-
-- Enhanced VM creation to correctly refresh and apply CPU, memory, and operating system settings when values were incomplete or invalid.
-
-## Bug fixes - Version 1.8.6
-
-- Fixed an issue that could block migrations when required change tracking information was missing.
-
-- Resolved a synchronization issue that could occur when VMware credentials contained a single quote (').
-
-- Fixed an intermittent issue where the UI incorrectly reported that PowerCLI was not installed when it was already available.
-
----
-
-
