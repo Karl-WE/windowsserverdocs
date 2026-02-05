@@ -73,7 +73,8 @@
         href: use/migrate-vmware-to-hyper-v-tsg.md
       - name: What's new in VM Conversion Extension
         href: use/migrate-vmware-to-hyper-v-whats-new.md
-      - name: use/migrate-vmware-to-hyper-v-faq.md
+      - name: FAQ
+        href: use/migrate-vmware-to-hyper-v-faq.md
     - name: Virtualization Mode (preview)
       items:
       - name: Install Virtualization Mode
