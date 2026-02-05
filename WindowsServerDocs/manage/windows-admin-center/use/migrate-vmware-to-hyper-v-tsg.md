@@ -9,18 +9,18 @@ ms.author: pmiddha
 
 # Troubleshooting guide for VM Conversion Extension in Windows Admin Center
 
-This article provides troubleshooting steps for common issues encountered when using the VM Conversion Extension to migrate VMware virtual machines to Hyper-V in Windows Admin Center.
+This article provides troubleshooting steps for common problems you encounter when using the VM Conversion Extension to migrate VMware virtual machines to Hyper-V in Windows Admin Center.
 
 
 
 >[!NOTE]
 >For issues or questions not covered in this documentation, you can submit feedback [here](https://github.com/MicrosoftDocs/Windows-Admin-Center-Ideas-and-Feedback).
 
-## Issue 1: VM resync/remigrate required, or migration stuck at a certain percentage (session timeout)
+## Problem 1: VM resync or remigrate required, or migration stuck at a certain percentage (session timeout)
 
 **Symptom:**
 
-- User wants to resync or remigrate a VM.
+- You want to resync or remigrate a VM.
 - Migration is stuck at a certain percentage due to a session timeout.
 
 **Resolution:**
@@ -30,7 +30,7 @@ This article provides troubleshooting steps for common issues encountered when u
    - `C:\Program Files\Windows Admin Center\Service\migrationStatus.json`
    - `C:\Program Files\Windows Admin Center\Service\syncStatus.json`
 
-1. If the VM already exists in **Hyper-V Manager**, delete it before reinitiating the migration.
+1. If the VM already exists in **Hyper-V Manager**, delete it before starting the migration again.
 
 ---
 
@@ -38,16 +38,16 @@ This article provides troubleshooting steps for common issues encountered when u
 
 **Symptom:**
 
-- User wants to cancel a synchronization or migration while it is in progress.
+- You want to cancel a synchronization or migration while it's in progress.
 
 **Resolution:**
-Cancellation isn't supported directly in the extension. As a workaround:
+The extension doesn't support cancellation directly. As a workaround:
 
 1. Stop the **Windows Admin Center service**.
 
-1. Restart the service. This releases all running threads.
+1. Restart the service. This action releases all running threads.
 
-1. Delete the relevant entries from the following files to ensure status doesn't continue to show as "In Progress":
+1. Delete the relevant entries from the following files to ensure the status doesn't continue to show as "In Progress":
 
    - `C:\Program Files\Windows Admin Center\Service\migrationStatus.json`
    - `C:\Program Files\Windows Admin Center\Service\syncStatus.json`
@@ -62,48 +62,48 @@ Cancellation isn't supported directly in the extension. As a workaround:
 
 **Resolution:**
 
-- Ensure there are no **failed virtual machines** present on the same destination server.
+- Make sure the same destination server doesn't have any **failed virtual machines**.
 
 ---
 
-## Issue 4: Static IP Configuration Is Not Preserved Without Guest Credentials
+## Issue 4: Static IP configuration isn't preserved without guest credentials
 
 **Scenario:**
 
-The VM Conversion tool can automatically migrate static IP settings for Windows virtual machines when guest operating system credentials are provided.
+When you provide guest operating system credentials, the VM Conversion tool can automatically migrate static IP settings for Windows virtual machines.
 
-If the user does not provide guest credentials, the tool cannot migrate static IP settings automatically.
+If you don't provide guest credentials, the tool can't automatically migrate static IP settings.
 
 **Symptom:**
 
 After migration, the virtual machine:
-- Receives a DHCP-assigned IP address, or
-- Does not retain its original static IP configuration
+- Gets a DHCP-assigned IP address, or
+- Doesn't keep its original static IP configuration
 
 **Cause:**
 
-Automatic static IP migration requires access to the guest operating system to read and reapply network settings.
+Automatic static IP migration needs access to the guest operating system to read and reapply network settings.
 
-When guest credentials are not provided due to security or compliance requirements, the VM Conversion tool cannot capture static IP configuration during migration.
+If you don't provide guest credentials because of security or compliance requirements, the VM Conversion tool can't capture static IP configuration during migration.
 
-**Resolution: Manual Static IP Migration (Guest Credentials Not Required)**
+**Resolution: Manual static IP migration (guest credentials not required)**
 
 Use the following workflow to preserve static IP configuration without providing guest credentials.
 
 > [!IMPORTANT]  
 > Complete these steps **after synchronization and before starting migration**.  
-> Running the script after migration does not preserve the static IP configuration.
+> Running the script after migration doesn't preserve the static IP configuration.
 
 1. Download the [**Static IP migration package (.zip)**](https://aka.ms/hci-migrate-static-ip-download).  
    The package includes scripts for **Windows and Linux** virtual machines.
 
-2. After synchronization completes, copy the package to a location inside the **source guest virtual machine** and extract the contents.
+1. After synchronization finishes, copy the package to a location inside the **source guest virtual machine** and extract the contents.
 
-3. Open **PowerShell as Administrator** inside the guest virtual machine.
+1. Open **PowerShell as Administrator** inside the guest virtual machine.
 
-4. Navigate to the extracted folder.
+1. Go to the extracted folder.
 
-5. Run the following command to capture the static IP configuration:
+1. Run the following command to capture the static IP configuration:
 
    ```powershell
    .\Prepare-MigratedVM.ps1 -StaticIPMigration -Verbose
@@ -111,7 +111,7 @@ Use the following workflow to preserve static IP configuration without providing
 
 ---
 
-## Issue 5: Synchronization Fails Due to an Invalid Change ID
+## Issue 5: Synchronization fails due to an invalid Change ID
 
 **Error Message:**
 
@@ -119,16 +119,16 @@ Use the following workflow to preserve static IP configuration without providing
 
 **When This Issue Occurs:**
 
-This issue occurs during **synchronization** when the VM Conversion extension cannot retrieve or validate the **Change ID** for one or more virtual disks on the source VMware virtual machine.
+This issue occurs during **synchronization** when the VM Conversion extension can't retrieve or validate the **Change ID** for one or more virtual disks on the source VMware virtual machine.
 
-The VM Conversion extension relies on **VMware Changed Block Tracking (CBT)** to identify incremental disk changes. If the Change ID is missing, stale, or invalid, synchronization cannot continue.
+The VM Conversion extension relies on **VMware Changed Block Tracking (CBT)** to identify incremental disk changes. If the Change ID is missing, stale, or invalid, synchronization can't continue.
 
 **Possible Causes:**
 
 This issue can occur for one or more of the following reasons:
 
 - Changed Block Tracking (CBT) is disabled or not fully enabled on the source virtual machine.
-- Snapshot-related issues, including:
+- Snapshot-related problems, including:
   - Orphaned or stale snapshots
   - Snapshot chain corruption
 - Unsupported disk configurations, such as:
@@ -142,17 +142,17 @@ This issue can occur for one or more of the following reasons:
 
 **What to Check:**
 
-Before retrying synchronization, verify the following:
+Before retrying synchronization, verify the following checks:
 
 1. Ensure CBT is enabled on the source virtual machine:
    - `ctkEnabled` is set to `true` at the virtual machine level.
    - `ctkEnabled` is set to `true` for each virtual disk.
-2. Verify that no active snapshots exist:
-   - Remove or consolidate snapshots if required.
-3. Validate disk configuration:
-   - Ensure disks are not configured as **Independent**.
+1. Verify that no active snapshots exist:
+   - Remove or consolidate snapshots if necessary.
+1. Validate disk configuration:
+   - Ensure disks aren't configured as **Independent**.
    - Verify RDMs use **Virtual Compatibility Mode**, if applicable.
-4. Review recent virtual machine operations:
+1. Review recent virtual machine operations:
    - Check for recent storage migrations, disk changes, or restore operations.
 
 **How to Fix the Issue:**
@@ -161,7 +161,7 @@ If synchronization fails due to an invalid Change ID, regenerate CBT metadata on
 
 ### Option 1: Regenerate CBT using PowerCLI
 
-You can also reset CBT programmatically using **VMware PowerCLI**, which is useful for automation scenarios or environments where GUI access is limited.
+You can also reset CBT programmatically using **VMware PowerCLI**. This method is useful for automation scenarios or environments where GUI access is limited.
 
 #### Prerequisites
 
@@ -191,14 +191,14 @@ Disconnect-VIServer -Server "<vCenterServer>" -Force -Confirm:$false
 ### Option 2: Regenerate CBT using the vSphere Client (GUI)
 
 1. Disable **Changed Block Tracking (CBT)** on the source virtual machine.
-2. Power off the virtual machine.
-3. Re-enable **Changed Block Tracking (CBT)**.
-4. Power on the virtual machine.
-5. Allow the system to generate a new Change ID.
-6. Retry the synchronization operation.
+1. Power off the virtual machine.
+1. Re-enable **Changed Block Tracking (CBT)**.
+1. Power on the virtual machine.
+1. Wait for the system to generate a new Change ID.
+1. Retry the synchronization operation.
 
 > [!NOTE]  
-> Power cycling the virtual machine is required to regenerate valid CBT metadata.
+> To regenerate valid CBT metadata, you must power cycle the virtual machine.
 
 **Learn More**
 

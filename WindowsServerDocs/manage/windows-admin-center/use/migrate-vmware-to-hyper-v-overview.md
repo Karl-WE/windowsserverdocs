@@ -24,14 +24,14 @@ In this article, you learn how to install and configure the extension, follow th
 
 The **VM Conversion extension** provides the following key features:
 
-- **Bulk migration**: Supports a batch of 10 virtual machines migration at-a-time. This feature enables admins to group virtual machines based on:
+- **Bulk migration**: Supports a batch migration of 10 virtual machines at a time. This feature enables admins to group virtual machines based on:
 
   - **Application dependency** – virtual machines that are part of the same application stack or service.
-  - **Cluster dependency** – virtual machines that need to be distributed on nodes within same cluster.
-  - **Business boundaries** – virtual machines servicing different business within a company. For example, test machines and preproduction machines.
+  - **Cluster dependency** – virtual machines that need to be distributed on nodes within the same cluster.
+  - **Business boundaries** – virtual machines servicing different businesses within a company. For example, test machines and preproduction machines.
   - **Rack dependency** – virtual machines running on hosts on a rack.
 
-- **Cluster-aware migration**: Supports migration virtual machines from eSXI hosts to Windows Server Failover clusters.
+- **Cluster-aware migration**: Supports migration of virtual machines from ESXi hosts to Windows Server Failover clusters.
 
 - **Static IP configurations**: Persists the static IP configurations of virtual machines from source to destination Hyper-V hosts. This functionality reduces post-migration tasks and enables seamless network continuity.
 
@@ -40,9 +40,9 @@ The **VM Conversion extension** provides the following key features:
   - Secure boot settings are dynamically configured based on OS, either Windows or Linux.
   - Added error handling for unsupported OS types.
 
-- **Localization support**: Improves user experience using this tool in different languages.
+- **Localization support**: Improves user experience when using this tool in different languages.
 
-- **Multiple vCenter connections**: Users can add multiple vCenter endpoints in order to switch between vCenters.
+- **Multiple vCenter connections**: Users can add multiple vCenter endpoints to switch between vCenters.
 
 - **Multi-disk support**: Ensures all attached virtual disks are migrated and synchronized for virtual machines running complex workloads.​
 
@@ -53,11 +53,11 @@ The **VM Conversion extension** provides the following key features:
 :::image type="content" source="media/migrate-vmware-to-hyper-v-overview/supported-scenario-topology.png" alt-text="Diagram showing the supported scenario topology for VM migration from VMware vCenter to Hyper-V through Windows Admin Center.":::
 
 > [!Note]
-> **Best practice:** Deploy the Windows Admin Center gateway in the same site as the ESXi and Hyper-V hosts for VM conversion. This ensures minimal WAN traffic, lower latency, and a reliable migration experience.
+> **Best practice:** Deploy the Windows Admin Center gateway in the same site as the ESXi and Hyper-V hosts for VM conversion. This deployment ensures minimal WAN traffic, lower latency, and a reliable migration experience.
 
 ## Prerequisites
 
-Before you begin, review the prerequisites and ensure your environment meets the requirements.
+Before you begin, review the prerequisites and make sure your environment meets the requirements.
 
 ### Windows Admin Center Gateway prerequisites
 
@@ -110,7 +110,7 @@ None.
 
 ### Supported vCenter versions
 
-- The extension supports VMware VCenter version 6.x or 7.x or 8.x.
+- The extension supports VMware vCenter versions 6.x, 7.x, and 8.x.
 - To connect to vCenter from the extension, keep the following vCenter information at hand:
   - Fully Qualified Domain Name (FQDN)
   - Username
@@ -137,7 +137,7 @@ RHEL-based operating systems:
 - CentOS
 - Red Hat Linux 9.0
 
-For Linux guests, Hyper-V drivers must be installed before initiating migration. The Hyper-V drivers are essential to ensure successful post-migration boot.
+For Linux guests, you must install Hyper-V drivers before starting migration. The Hyper-V drivers are essential to ensure successful post-migration boot.
 
 ---
 ## Install the VM Conversion (Preview) extension in Windows Admin Center
@@ -148,13 +148,13 @@ Complete the following steps to install the **VM Conversion** extension.
 
 1. Select the **Settings** button in the top-right. In the left pane, select **Extensions**.
 
-1. The Available Extensions tab lists the extensions on the feed that are available for installation.
+1. The **Available Extensions** tab lists the extensions on the feed that you can install.
 
-1. Search for **VM Conversion (Preview)** in **Available extensions** and select **Install.**
+1. Search for **VM Conversion (Preview)** in **Available extensions** and select **Install**.
 
     :::image type="content" source="media/migrate-vmware-to-hyper-v-overview/vm-conversion-available-extensions.png" alt-text="Screenshot of the VM Conversion (Preview) extension in the list of all Available extensions." lightbox="media/migrate-vmware-to-hyper-v-overview/vm-conversion-available-extensions.png":::
 
-1. Once installed, ensure VM Conversion extension is visible in the Windows Admin Center under: **Extensions** > **VM Conversion (Preview)**.
+1. After installation, make sure the **VM Conversion** extension appears in Windows Admin Center under: **Extensions** > **VM Conversion (Preview)**.
 
 ## Connect to vCenter
 
@@ -172,7 +172,7 @@ When you first visit the extension, you need to connect your vSphere client endp
 
 ### Synchronization prechecks
 
-A set of prechecks are run before the synchronization begins. Confirm you have all the following steps complete before continuing on with the steps to synchronize virtual machines:
+The process runs a set of prechecks before it starts synchronization. Make sure you complete all the following steps before you continue with the steps to synchronize virtual machines:
 
 1. No active snapshots exist on the virtual machine.
 
@@ -214,17 +214,17 @@ Complete the following steps to synchronize VMware virtual machines in Windows A
 
 ### Migration prechecks
 
-A set of prechecks are run before the migration begins. Confirm you have all the following steps complete before continuing on with the steps to migrate virtual machines:
+The migration process runs a set of prechecks before it begins. Make sure you complete the following steps before you continue with the steps to migrate virtual machines:
 
-1. Destination Hyper-V host has sufficient vCPU availability.
+1. The destination Hyper-V host has enough available vCPUs.
 
-1. No existing virtual machine with the same name on the destination Hyper-V host.
+1. No virtual machine with the same name exists on the destination Hyper-V host.
 
-1. Hyper-V role is enabled on the target Hyper-V host.
+1. The Hyper-V role is enabled on the target Hyper-V host.
 
 1. Synchronized `.vhdx` file exists.
 
-1. No active snapshots on the virtual machine.
+1. The virtual machine has no active snapshots.
 
 ### Migrate virtual machines
 
@@ -238,17 +238,17 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
 
     :::image type="content" source="media/migrate-vmware-to-hyper-v-overview/confirm-migration.png" alt-text="Screenshot of the dialog confirming that the migration can start." lightbox="media/migrate-vmware-to-hyper-v-overview/confirm-migration.png":::
 
-    During the migration, the following steps are performed: run migration prechecks, ensure sufficient disk space, perform delta replication, power off source VM, execute final delta sync, and import VM into Hyper-V.
+    During the migration, the process performs the following steps: runs migration prechecks, ensures sufficient disk space, performs delta replication, powers off source VM, executes final delta sync, and imports VM into Hyper-V.
 
 1. Wait for virtual machine migration to complete.
 
     :::image type="content" source="media/migrate-vmware-to-hyper-v-overview/migration-in-progress.png" alt-text="Screenshot of the progress of virtual machine migration." lightbox="media/migrate-vmware-to-hyper-v-overview/migration-in-progress.png":::
 
-1. The migrated virtual machine can be managed using the Hyper-V Manager, or in Windows Admin Center.
+1. You can manage the migrated virtual machine using the Hyper-V Manager or Windows Admin Center.
 
     > [!NOTE]
     > Migration requires the user to stay signed in with an active browser session. If the session is closed or times out, the
-    > migration may pause or stop progressing.
+    > migration might pause or stop progressing.
 
 ---
 
@@ -256,7 +256,7 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
 
 ### Browser console logs
 
-1. Open your browser settings, and navigate to **More Tools** > **Developer Tools**.
+1. Open your browser settings, and go to **More Tools** > **Developer Tools**.
 1. Check the **Console** tab.
 1. Look for any error or warning messages and share them as needed.
 
