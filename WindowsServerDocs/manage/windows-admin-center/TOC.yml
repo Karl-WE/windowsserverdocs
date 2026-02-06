@@ -74,7 +74,7 @@
       - name: What's new in VM Conversion Extension
         href: use/migrate-vmware-to-hyper-v-whats-new.md
       - name: FAQ
-        href: use/migrate-vmware-to-hyper-v-faq.yml
+        href: use/migrate-vmware-hyper-v-faq.yml
     - name: Virtualization Mode (preview)
       items:
       - name: Install Virtualization Mode
