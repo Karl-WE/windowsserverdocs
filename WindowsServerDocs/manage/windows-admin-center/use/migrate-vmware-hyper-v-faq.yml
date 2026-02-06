@@ -96,7 +96,7 @@ sections:
             .DESCRIPTION
             This script stops a specified Hyper-V virtual machine, updates its BIOS GUID using CIM (Common Information Model), and WMIv2 (root\virtualization\v2), and then restarts the VM. It handles both synchronous and asynchronous operations triggered by the Hyper-V Management Service.
             
-            It's particularly useful in scenarios such as VM identity synchronization, VM migration, or reconfiguration where BIOS-level identifiers are required to be updated.
+            It's useful in scenarios such as VM identity synchronization, VM migration, or reconfiguration where BIOS-level identifiers are required to be updated.
             
             .PARAMETER VMName
             The name of the Hyper-V virtual machine whose BIOS GUID is to be updated.
@@ -119,7 +119,7 @@ sections:
             - Tested on Windows Server 2019/2022 and Windows 10/11 with Hyper-V enabled
             
             .RETURNS
-            Outputs success messages and job details. Throws descriptive errors in case of failure.
+            Outputs success messages and job details. Throws descriptive errors if there is a failure.
             
             .LINK
             https://learn.microsoft.com/windows-server/virtualization/hyper-v/
@@ -187,7 +187,7 @@ sections:
                 # Get the job object using its path
                 $job = Microsoft.PowerShell.Management\Get-CimInstance -CimInstance $jobPath
             
-                # Poll the job state until it is no longer Running (4) or Starting (3)
+                # Poll the job state until it's no longer Running (4) or Starting (3)
                 while ($job.JobState -eq 3 -or $job.JobState -eq 4) {
                     Start-Sleep -Seconds 1
                     $job = Microsoft.PowerShell.Management\Get-CimInstance -CimInstance $jobPath
@@ -198,7 +198,7 @@ sections:
                     Write-Host "BIOS GUID updated successfully for VM: $VMName (asynchronous job completed)"
                 }
                 else {
-                    # Job failed or did not complete properly
+                    # Job failed or didn't complete properly
                     throw "Async job failed. JobState: $($job.JobState), ErrorDescription: $($job.ErrorDescription)"
                 }
             }
