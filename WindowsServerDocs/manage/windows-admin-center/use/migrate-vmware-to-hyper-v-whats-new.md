@@ -1,15 +1,16 @@
 ---
-
-title: What's new in VM Conversion Extension for Windows Admin Center
-description: Learn about the features and enhancements in VM Conversion that help to improve security, performance, and flexibility.
+title: "Whats new in VM Conversion Extension for Windows Admin Center (Preview)"
+description: Discover the latest features and enhancements in the VM Conversion Extension for Windows Admin Center (Preview) to improve security, performance, and flexibility.
+#customer intent: As a virtualization administrator, I want to understand the new features in the VM Conversion Extension so that I can optimize my virtual machine migration process.
 author: pmiddha
 ms.author: pmiddha
 ms.topic: release-notes
 ms.date: 01/16/2026
+ms.reviewer: shsathee,pmiddha
 
 ---
 
-# What's new in VM Conversion Extension for Windows Admin Center
+# What's new in VM Conversion Extension for Windows Admin Center (Preview)
 
 This article provides release notes for the VM Conversion Extension in Windows Admin Center. Use these notes to learn about new features, enhancements, and bug fixes in each version.
 

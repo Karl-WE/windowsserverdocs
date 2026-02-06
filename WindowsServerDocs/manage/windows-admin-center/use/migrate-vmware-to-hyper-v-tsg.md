@@ -1,20 +1,28 @@
 ---
-title: Troubleshooting guide for VM Conversion Extension in Windows Admin Center
-description: This article introduces a troubleshooting guide for VM Conversion issues.
-ms.date: 1/6/2026
+title: Troubleshooting guide for VM Conversion Extension in Windows Admin Center (Preview)
+description: Troubleshoot VM Conversion Extension problems in Windows Admin Center. Fix migration errors, static IP issues, and synchronization failures with this guide.
+#customer intent: As a virtualization administrator, I want to troubleshoot VM conversion issues in Windows Admin Center so that I can successfully migrate VMware virtual machines to Hyper-V.
+ms.date: 01/06/2026
 ms.topic: troubleshooting
 author: pmiddha
 ms.author: pmiddha
+ms.reviewer: shsathee,pmiddha
 ---
 
-# Troubleshooting guide for VM Conversion Extension in Windows Admin Center
+# Troubleshooting guide for VM Conversion Extension in Windows Admin Center (Preview)
 
-This article provides troubleshooting steps for common problems you encounter when using the VM Conversion Extension to migrate VMware virtual machines to Hyper-V in Windows Admin Center.
+> [!IMPORTANT]
+> The VM Conversion extension is currently in PREVIEW.
+> This document provides information about a prerelease product that might change substantially before its release. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+>
+> As a preview extension, the VM Conversion extension is governed by the [Windows Admin Center prerelease extension software license terms](/legal/windows-server/windows-admin-center/windows-pre-release-extension-eula).
+> Microsoft isn't obligated under this agreement to provide any support services for the software. Issues, questions, and feedback not covered in this documentation can be filed [here](https://github.com/MicrosoftDocs/Windows-Admin-Center-Ideas-and-Feedback).
 
+Migrating virtual machines from VMware to Hyper-V can sometimes run into unexpected issues. This article helps you diagnose and resolve common problems you might encounter when using the VM Conversion Extension in Windows Admin Center, including stuck migrations, synchronization failures, static IP configuration issues, and Change ID errors.
 
+Use this guide if your migration isn't completing as expected or you're seeing error messages during synchronization or conversion. Each section describes the symptoms, explains the cause, and walks you through the steps to fix the problem.
 
->[!NOTE]
->For issues or questions not covered in this documentation, you can submit feedback [here](https://github.com/MicrosoftDocs/Windows-Admin-Center-Ideas-and-Feedback).
+For issues or questions not covered in this documentation, you can submit feedback in our [Windows Admin Center Ideas & Feedback repository](https://github.com/MicrosoftDocs/Windows-Admin-Center-Ideas-and-Feedback).
 
 ## Problem 1: VM resync or remigrate required, or migration stuck at a certain percentage (session timeout)
 
@@ -77,6 +85,7 @@ If you don't provide guest credentials, the tool can't automatically migrate sta
 **Symptom:**
 
 After migration, the virtual machine:
+
 - Gets a DHCP-assigned IP address, or
 - Doesn't keep its original static IP configuration
 

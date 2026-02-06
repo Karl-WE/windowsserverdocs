@@ -5,14 +5,14 @@ author: robinharwood
 ms.topic: how-to
 ms.date: 08/13/2025
 ms.author: roharwoo
+ms.reviewer: shsathee,pmiddha
 ---
 # Migrate VMware virtual machines to Hyper-V in Windows Admin Center (Preview)
 
 > [!IMPORTANT]
 > The VM Conversion extension is currently in PREVIEW.
 > This document provides information about a prerelease product that might change substantially before its release. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
-
-> [!IMPORTANT]
+>
 > As a preview extension, the VM Conversion extension is governed by the [Windows Admin Center prerelease extension software license terms](/legal/windows-server/windows-admin-center/windows-pre-release-extension-eula).
 > Microsoft isn't obligated under this agreement to provide any support services for the software. Issues, questions, and feedback not covered in this documentation can be filed [here](https://github.com/MicrosoftDocs/Windows-Admin-Center-Ideas-and-Feedback).
 
