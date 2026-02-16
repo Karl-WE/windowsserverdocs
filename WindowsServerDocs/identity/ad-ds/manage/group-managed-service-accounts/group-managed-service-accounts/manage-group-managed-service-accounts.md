@@ -2,8 +2,8 @@
 title: Manage Group Managed Service Accounts
 description: Learn how to manage and use Group Managed Service Accounts (gMSA) in Windows Server.
 ms.topic: how-to
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 07/01/2025
 ---
 
