@@ -199,5 +199,6 @@ During synchronization and migration, you can view logs in the following locatio
 ## Related content
 
 - [Overview of VMware to Hyper-V migration](migrate-vmware-to-hyper-v-overview.md)
-- [Troubleshoot VM Conversion Extension](troubleshoot-vm-conversion-extension.md)
+- [Troubleshoot VM Conversion Extension](migrate-vmware-to-hyper-v-troubleshoot.md)
 - [What's new in VM Conversion Extension](migrate-vmware-to-hyper-v-whats-new.md)
+- [VMware to Hyper-V migration FAQ](migrate-vmware-to-hyper-v-faq.yml)

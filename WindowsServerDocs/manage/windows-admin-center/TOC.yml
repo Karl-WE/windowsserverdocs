@@ -70,13 +70,13 @@
       - name: Overview
         href: use/migrate-vmware-to-hyper-v-overview.md
       - name: How To
-        href: use/how-to-migrate-vmware-to-hyper-v.md
+        href: use/migrate-vmware-to-hyper-v-how-to.md
       - name: Troubleshooting
-        href: use/troubleshoot-vm-conversion-extension.md
+        href: use/migrate-vmware-to-hyper-v-troubleshoot.md
       - name: What's new
         href: use/migrate-vmware-to-hyper-v-whats-new.md
       - name: FAQ
-        href: use/migrate-vmware-hyper-v-faq.yml
+        href: use/migrate-vmware-to-hyper-v-faq.yml
     - name: Virtualization Mode (preview)
       items:
       - name: Install Virtualization Mode

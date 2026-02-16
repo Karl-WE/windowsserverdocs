@@ -144,7 +144,7 @@ The VM Conversion Extension helps you migrate VMware virtual machines to Hyper-V
     The migration process now preserves the BIOS UUID from the source VM, ensuring improved compatibility and identity synchronization on Hyper-V.
 
     >[!NOTE]
-    >Only the BIOS UUID is migrated. BIOS serial number format differs between VMware and Hyper-V, which can affect licensing checks. For more information, see [FAQ](migrate-vmware-hyper-v-faq.yml).
+    >Only the BIOS UUID is migrated. BIOS serial number format differs between VMware and Hyper-V, which can affect licensing checks. For more information, see [FAQ](migrate-vmware-to-hyper-v-faq.yml).
 
 - **Standardized Destination Folder Structure**
 
@@ -179,11 +179,11 @@ The VM Conversion Extension helps you migrate VMware virtual machines to Hyper-V
 
 - **Windows VMs** - VMware Tools batch uninstall is supported only for Windows VMs.  
 
-- **Licensing note** - Differences in BIOS Serial Number might affect licensing. See [FAQ](migrate-vmware-hyper-v-faq.yml) for details.
+- **Licensing note** - Differences in BIOS Serial Number might affect licensing. See [FAQ](migrate-vmware-to-hyper-v-faq.yml) for details.
 
 ## Related content
 
 - [Overview of VMware to Hyper-V migration](migrate-vmware-to-hyper-v-overview.md)
-- [Migrate VMware VMs to Hyper-V in Windows Admin Center](how-to-migrate-vmware-to-hyper-v.md)
-- [Troubleshoot VM Conversion Extension](troubleshoot-vm-conversion-extension.md)
-- [VMware to Hyper-V migration FAQ](migrate-vmware-hyper-v-faq.yml)
+- [Migrate VMware VMs to Hyper-V in Windows Admin Center](migrate-vmware-to-hyper-v-how-to.md)
+- [Troubleshoot VM Conversion Extension](migrate-vmware-to-hyper-v-troubleshoot.md)
+- [VMware to Hyper-V migration FAQ](migrate-vmware-to-hyper-v-faq.yml)

@@ -136,7 +136,7 @@ The following operating systems can use the VM Conversion extension:
 
 ## Related content
 
-- [Migrate VMware VMs to Hyper-V in Windows Admin Center](how-to-migrate-vmware-to-hyper-v.md)
-- [Troubleshoot VM Conversion Extension](troubleshoot-vm-conversion-extension.md)
+- [Migrate VMware VMs to Hyper-V in Windows Admin Center](migrate-vmware-to-hyper-v-how-to.md)
+- [Troubleshoot VM Conversion Extension](migrate-vmware-to-hyper-v-troubleshoot.md)
 - [What's new in VM Conversion Extension](migrate-vmware-to-hyper-v-whats-new.md)
-- [FAQ](migrate-vmware-hyper-v-faq.yml)
+- [VMware to Hyper-V migration FAQ](migrate-vmware-to-hyper-v-faq.yml)

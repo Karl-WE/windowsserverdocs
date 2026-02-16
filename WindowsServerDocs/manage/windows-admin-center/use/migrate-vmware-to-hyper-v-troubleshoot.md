@@ -223,5 +223,6 @@ Validate CBT health on the source virtual machine before starting synchronizatio
 ## Related content
 
 - [Overview of VMware to Hyper-V migration](migrate-vmware-to-hyper-v-overview.md)
-- [Migrate VMware VMs to Hyper-V in Windows Admin Center](how-to-migrate-vmware-to-hyper-v.md)
+- [Migrate VMware VMs to Hyper-V in Windows Admin Center](migrate-vmware-to-hyper-v-how-to.md)
 - [What's new in VM Conversion Extension](migrate-vmware-to-hyper-v-whats-new.md)
+- [VMware to Hyper-V migration FAQ](migrate-vmware-to-hyper-v-faq.yml)
