@@ -3,8 +3,8 @@ title: Detect and Remediate RC4 Usage in Kerberos
 description: Learn how to detect and limit or disable RC4 usage in Kerberos to enhance security in Active Directory domain environments.
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.reviewer: mapalko
 ms.date: 02/06/2026
 ---

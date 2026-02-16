@@ -2,8 +2,8 @@
 title: Overview of Windows Server upgrades | Microsoft Docs
 description: General Windows Server upgrade information, along with what to think through before you do the actual upgrade.
 ms.topic: how-to
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 05/23/2025
 ---
 

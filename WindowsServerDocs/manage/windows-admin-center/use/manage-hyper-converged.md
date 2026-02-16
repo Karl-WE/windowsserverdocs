@@ -2,8 +2,8 @@
 title: Manage Hyper-converged Infrastructure by Using Windows Admin Center
 description: Learn how to manage a hyper-converged infrastructure by using Windows Admin Center.
 ms.topic: how-to
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 03/15/2023
 ms.custom: sfi-image-nochange
 ---

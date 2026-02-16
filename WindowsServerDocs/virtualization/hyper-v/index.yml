@@ -7,8 +7,8 @@ metadata:
   title: Hyper-V documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
   description: Hyper-V in Windows Server enables you to run Windows and Linux virtual machines at scale, providing flexibility and maximizing resources. # Required; article description that is displayed in search results. < 160 chars.
   ms.topic: landing-page # Required
-  author: dknappettmsft #Required; your GitHub user alias, with correct capitalization.
-  ms.author: daknappe #Required; microsoft alias of author; optional team alias.
+  author: robinharwood #Required; your GitHub user alias, with correct capitalization.
+  ms.author: roharwoo #Required; microsoft alias of author; optional team alias.
   ms.service: windows-server
   ms.subservice: hyper-v
   ms.date: 07/24/2025

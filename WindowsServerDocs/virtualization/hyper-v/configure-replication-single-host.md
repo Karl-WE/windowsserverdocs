@@ -3,8 +3,8 @@ title: Enable Hyper-V Replica on a single host
 description: Learn how to configure replication for virtual machines going to single Hyper-V hosts using Hyper-V Replica.
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 11/10/2025
 ---
 

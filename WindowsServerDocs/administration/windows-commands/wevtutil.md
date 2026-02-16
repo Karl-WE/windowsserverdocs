@@ -2,8 +2,8 @@
 title: wevtutil
 description: Reference article for wevtutil, which lets you retrieve information about event logs and publishers.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/26/2022
 ---
 
