@@ -69,11 +69,11 @@
       items:
       - name: Overview
         href: use/migrate-vmware-to-hyper-v-overview.md
-      - name: Migrate VMware VMs to Hyper-V
+      - name: How To
         href: use/how-to-migrate-vmware-to-hyper-v.md
-      - name: Troubleshoot VM Conversion Extension
+      - name: Troubleshooting
         href: use/troubleshoot-vm-conversion-extension.md
-      - name: What's new in VM Conversion Extension
+      - name: What's new
         href: use/migrate-vmware-to-hyper-v-whats-new.md
       - name: FAQ
         href: use/migrate-vmware-hyper-v-faq.yml
