@@ -3,8 +3,8 @@ title: Convert a disk to Dynamic or Basic
 description: Learn how to convert a disk type to Dynamic or Basic using Disk Management and the command line in Windows.
 ms.date: 06/17/2025
 ms.topic: how-to
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ---
 
 # Convert a disk type to Dynamic or Basic

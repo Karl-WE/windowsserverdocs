@@ -3,8 +3,8 @@ title: Replicate a virtual machine with Hyper-V Replica
 description: Learn how to replicate a virtual machine between Hyper-V hosts using Hyper-V Replica.
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 11/10/2025
 ---
 
