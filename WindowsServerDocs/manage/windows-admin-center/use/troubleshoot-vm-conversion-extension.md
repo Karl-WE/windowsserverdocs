@@ -219,3 +219,9 @@ For more information about CBT limitations and troubleshooting guidance, see the
 **Best Practice**
 
 Validate CBT health on the source virtual machine before starting synchronization, especially after snapshot operations or virtual machine configuration changes.
+
+## Related content
+
+- [Overview of VMware to Hyper-V migration](migrate-vmware-to-hyper-v-overview.md)
+- [Migrate VMware VMs to Hyper-V in Windows Admin Center](how-to-migrate-vmware-to-hyper-v.md)
+- [What's new in VM Conversion Extension](migrate-vmware-to-hyper-v-whats-new.md)

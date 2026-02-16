@@ -90,7 +90,7 @@ The VM Conversion Extension helps you migrate VMware virtual machines to Hyper-V
 #### Migration workflow improvements
 - Improved stability, validation, and error handling for a smoother migration experience.
 
-### Bug fixes - Version 1.8.4
+### Bug fixes - Version 1.8.3
 - Fixed an issue where the **Submit** button in the vCenter credentials dialog could remain disabled after a failure.  
 - Resolved a problem where migrations could get stuck at **80% progress**.  
 
@@ -180,3 +180,10 @@ The VM Conversion Extension helps you migrate VMware virtual machines to Hyper-V
 - **Windows VMs** - VMware Tools batch uninstall is supported only for Windows VMs.  
 
 - **Licensing note** - Differences in BIOS Serial Number might affect licensing. See [FAQ](migrate-vmware-hyper-v-faq.yml) for details.
+
+## Related content
+
+- [Overview of VMware to Hyper-V migration](migrate-vmware-to-hyper-v-overview.md)
+- [Migrate VMware VMs to Hyper-V in Windows Admin Center](how-to-migrate-vmware-to-hyper-v.md)
+- [Troubleshoot VM Conversion Extension](troubleshoot-vm-conversion-extension.md)
+- [VMware to Hyper-V migration FAQ](migrate-vmware-hyper-v-faq.yml)

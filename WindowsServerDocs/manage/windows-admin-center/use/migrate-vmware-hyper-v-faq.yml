@@ -71,7 +71,7 @@ sections:
 
       - question: What are the current limitations of this migration tool?
         answer: |
-          - The Resync option provides the capability to do data synchronization between initial replication and delta replication. The Resync option isn't supported.
+          - The Resync option, which allows data synchronization between initial replication and delta replication, isn't currently supported.
 
           - VMware Tools aren't automatically uninstalled post-migration—remove them manually if needed.
 
@@ -227,6 +227,7 @@ additionalContent: |
 
   To learn more, see the following articles:
 
-  - [Troubleshooting guide for VM Conversion Extension in Windows Admin Center](migrate-vmware-to-hyper-v-tsg.md)
-  - [Migrate VMware Virtual Machines to Hyper-V in Windows Admin Center](migrate-vmware-to-hyper-v-overview.md)
-  - [What's new in VM Conversion Extension for Windows Admin Center](migrate-vmware-to-hyper-v-whats-new.md)
+  - [Overview of VMware to Hyper-V migration](migrate-vmware-to-hyper-v-overview.md)
+  - [Migrate VMware Virtual Machines to Hyper-V in Windows Admin Center](how-to-migrate-vmware-to-hyper-v.md)
+  - [Troubleshoot VM Conversion Extension](troubleshoot-vm-conversion-extension.md)
+  - [What's new in VM Conversion Extension](migrate-vmware-to-hyper-v-whats-new.md)
