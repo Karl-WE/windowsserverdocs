@@ -71,10 +71,10 @@ If you already have a certificate on the server, go to [Bind the certificate](#b
 
 1. When prompted, enter the password for your certificate.
 
-1. To verify that the certificate was imported successfully, run the following command, replacing `yourcertsubject` with the subject of your certificate:
+1. To verify that the certificate was imported successfully, run the following command, replacing `<subject-name>` with the subject of your certificate:
 
    ```powershell
-   Get-ChildItem -Path Cert:\LocalMachine\My | Where-Object { $_.Subject -like "yourcertsubject" }
+   Get-ChildItem -Path Cert:\LocalMachine\My | Where-Object { $_.Subject -match "<subject-name>" }
    ```
 
 ## Bind the certificate
