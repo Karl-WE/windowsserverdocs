@@ -1,8 +1,8 @@
 ---
 title: Use GPUs with Discrete Device Assignment in clustered VMs on Windows Server and Azure Local
 description: Learn how to use GPUs with clustered virtual machines (VMs) to provide GPU acceleration to workloads in the clustered VMs on Windows Server and Azure Local.
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.topic: how-to
 ms.date: 01/30/2026
 zone_pivot_groups: windows-os

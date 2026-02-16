@@ -3,8 +3,8 @@ title: Hyper-V virtualization in Windows Server and Windows
 description: Learn about Hyper-V virtualization technology to run virtual machines, its key features, benefits, and how to get started in Windows Server and Windows. Discover common uses and scenarios.
 ms.topic: overview
 ai-usage: ai-assisted
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 07/28/2025
 #customer-intent: As an IT professional, I want to understand Hyper-V's capabilities and how it can benefit my organization, so I can make informed decisions about virtualization solutions.
 ---

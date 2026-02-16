@@ -3,8 +3,8 @@ title: Uninstall and Reinstall the Remote Desktop Connection App in Windows
 description: Learn how to uninstall and reinstall the Remote Desktop Connection app in Windows 11. Follow step-by-step instructions to manage this built-in app.
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 06/05/2025
 ---
 

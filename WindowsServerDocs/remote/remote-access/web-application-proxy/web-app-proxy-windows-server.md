@@ -1,8 +1,8 @@
 ---
 description: "Learn more about: Web Application Proxy in Windows Server"
 title: Web Application Proxy in Windows Server
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 07/13/2016
 ms.topic: concept-article
 ---

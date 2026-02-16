@@ -3,8 +3,8 @@ title: License Remote Desktop Services with Client Access Licenses (CALs)
 description: Learn about Remote Desktop Services Client Access Licenses (CALs). Understand CAL types, compatibility, and ensure compliance.
 ms.topic: concept-article
 ai-usage: ai-assisted 
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 06/16/2025
 ---
 
