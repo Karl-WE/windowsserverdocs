@@ -180,18 +180,25 @@ During synchronization and migration, you can view logs in the following locatio
 
 ### Browser console logs
 
+Browser console logs are useful for identifying any failing API calls from Windows Admin Center. To view the browser console logs, follow these steps:
+
 1. Open your browser settings, and go to **More Tools** > **Developer Tools**.
 1. Check the **Console** tab.
 1. Look for any error or warning messages and share them as needed.
 
 ### Event viewer logs
 
+Event Viewer logs capture server-side errors and warnings from the Windows Admin Center gateway, including authentication issues, service failures, and extension errors. To view the Event Viewer logs for Windows Admin Center, follow these steps:
+
 1. On the Windows Admin Center server, open **Event Viewer**.
 1. Expand **Applications and Services Logs** in the left pane.
 1. Select **WindowsAdminCenter**.
 1. Filter and review logs for **Errors**, **Warnings**, and **Informational** messages relevant to the VM Conversion extension.
+1. Look for events with the source **WebREST** and Event ID **422** for VM conversion-related issues.
 
 ### VM conversion logs
+
+VM conversion logs provide detailed information about the synchronization and migration process, including disk copy progress, error details, and operation timestamps. To view the VM conversion logs, follow these steps:
 
 1. Connect to the Windows Admin Center server.
 1. Find the file located at `C:\Program Files\WindowsAdminCenter\Service\VMConversion_log.txt`.
