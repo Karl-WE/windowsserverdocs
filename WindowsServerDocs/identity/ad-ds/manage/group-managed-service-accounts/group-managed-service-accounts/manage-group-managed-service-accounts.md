@@ -66,6 +66,8 @@ For Kerberos authentication to work with services using gMSAs, the following are
 
 - All systems involved in the authentication process must have synchronized clocks. Kerberos is sensitive to time configuration, and discrepancies can cause authentication failures.
 
+- All systems that log on as, or install using a gMSA must support the Kerberos encryption types required by gMSA. Systems that don't meet this requirement can't log on or install gMSA.
+
 If you're managing AD from a computer that isn't a domain controller, install the Remote Server Administration Tools (RSAT) to access the necessary management features. RSAT provides the AD module for PowerShell. After installing RSAT, open PowerShell as an administrator and run `Import-Module ActiveDirectory` to enable AD management cmdlets. This allows administrators to manage AD remotely and securely, minimizing the load on domain controllers.
 
 ### Create a gMSA
