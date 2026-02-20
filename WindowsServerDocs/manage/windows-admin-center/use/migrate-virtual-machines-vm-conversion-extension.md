@@ -25,11 +25,11 @@ For an overview of the VM Conversion extension, including key features and suppo
 
 Before you begin, review the prerequisites and make sure your environment meets the requirements.
 
-- VMware vCenter version, 6.x, 7.x, or 8.x.
+- VMware vCenter version, 6.x, 7.x, or 8.x with privileges access to the virtual machines you want to migrate.
 
-- Ensure that the Hyper-V role is installed on the target Hyper-V host.
+- Ensure that the Hyper-V role is installed on the target Hyper-V host. You'll also need membership to the local Administrators group or the Hyper-V Administrators group to create and manage virtual machines on the Hyper-V host.
 
-- Review the [supported guest operating systems](vm-conversion-extension-overview.md#supported-versions-and-operating-systems) to ensure the VMs you're migrating are compatible.
+- Review the [guest operating systems](vm-conversion-extension-overview.md#vcenter-versions-and-guest-operating-systems) to ensure the VMs you're migrating are compatible.
 
 On the Windows Admin Center Gateway machine, ensure you have the following:
 
@@ -41,7 +41,7 @@ On the Windows Admin Center Gateway machine, ensure you have the following:
 
 - [VMware Virtual Disk Development Kit (VDDK) version 8.0.3](https://developer.broadcom.com/sdks/vmware-virtual-disk-development-kit-vddk/latest/) downloaded and extracted to the directory: `C:\Program Files\WindowsAdminCenter\Service\VDDK`. Ensure you download **VDDK version 8.0.3** specifically. Other versions aren't supported.
 
-- [Visual Studio 2015 (VC++ 14.0) Redistributable](/cpp/windows/latest-supported-vc-redist?view=msvc-170#visual-studio-2015-vc-140-no-longer-supported) and [Visual C++ Redistributable Packages for Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40784) installed.
+- [Visual Studio 2015 (VC++ 14.0) Redistributable](/cpp/windows/latest-supported-vc-redist#visual-studio-2015-vc-140-no-longer-supported) and [Visual C++ Redistributable Packages for Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40784) installed.
 
 ## Install the VM Conversion extension
 
