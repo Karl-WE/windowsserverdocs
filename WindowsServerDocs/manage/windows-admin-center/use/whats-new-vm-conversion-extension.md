@@ -1,5 +1,5 @@
 ---
-title: "Whats new in the VM Conversion Extension for Windows Admin Center (Preview)"
+title: "What's new in the VM Conversion Extension for Windows Admin Center (Preview)"
 description: Discover the latest features and enhancements in the VM Conversion Extension for Windows Admin Center (Preview) to improve security, performance, and flexibility.
 #customer intent: As a virtualization administrator, I want to understand the new features in the VM Conversion Extension so that I can optimize my virtual machine migration process.
 author: pmiddha

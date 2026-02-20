@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot the VM Conversion Extension in Windows Admin Center (Preview)
-description: Resolve VMware to Hyper-V migration problems using the VM Conversion Extension. Diagnose and fix errors, stuck migrations, and network configuration issues.
-#customer intent: As a virtualization administrator, I want to troubleshoot VM conversion issues in Windows Admin Center so that I can successfully migrate VMware virtual machines to Hyper-V.
+description: Resolve VMware to Hyper-V migration problems using the VM Conversion Extension. Diagnose and fix errors, stuck migrations, and network configuration problems.
+#customer intent: As a virtualization administrator, I want to troubleshoot VM conversion problems in Windows Admin Center so that I can successfully migrate VMware virtual machines to Hyper-V.
 ms.date: 01/06/2026
 ms.topic: troubleshooting
 author: pmiddha
@@ -16,13 +16,13 @@ ms.reviewer: shsathee,pmiddha
 > This document provides information about a prerelease product that might change substantially before its release. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 >
 > As a preview extension, the VM Conversion extension is governed by the [Windows Admin Center prerelease extension software license terms](/legal/windows-server/windows-admin-center/windows-pre-release-extension-eula).
-> Microsoft isn't obligated under this agreement to provide any support services for the software. Issues, questions, and feedback not covered in this documentation can be filed [here](https://github.com/MicrosoftDocs/Windows-Admin-Center-Ideas-and-Feedback).
+> Microsoft isn't obligated under this agreement to provide any support services for the software. Problems, questions, and feedback not covered in this documentation can be filed [here](https://github.com/MicrosoftDocs/Windows-Admin-Center-Ideas-and-Feedback).
 
-Migrating virtual machines from VMware to Hyper-V can sometimes run into unexpected issues. This article helps you diagnose and resolve common problems you might encounter when using the VM Conversion Extension in Windows Admin Center, including stuck migrations, synchronization failures, static IP configuration issues, and Change ID errors.
+Migrating virtual machines from VMware to Hyper-V can sometimes run into unexpected problems. This article helps you diagnose and resolve common problems you might encounter when using the VM Conversion Extension in Windows Admin Center, including stuck migrations, synchronization failures, static IP configuration problems, and Change ID errors.
 
 Use this guide if your migration isn't completing as expected or you're seeing error messages during synchronization or conversion. Each section describes the symptoms, explains the cause, and walks you through the steps to fix the problem.
 
-For issues or questions not covered in this documentation, you can submit feedback in our [Windows Admin Center Ideas & Feedback repository](https://github.com/MicrosoftDocs/Windows-Admin-Center-Ideas-and-Feedback).
+For problems or questions not covered in this documentation, you can submit feedback in our [Windows Admin Center Ideas & Feedback repository](https://github.com/MicrosoftDocs/Windows-Admin-Center-Ideas-and-Feedback).
 
 ## Problem 1: VM resync or remigrate required, or migration stuck at a certain percentage (session timeout)
 
@@ -42,7 +42,7 @@ For issues or questions not covered in this documentation, you can submit feedba
 
 ---
 
-## Issue 2: Cancel VM synchronization or migration in progress
+## Problem 2: Cancel VM synchronization or migration in progress
 
 **Symptom:**
 
@@ -62,7 +62,7 @@ The extension doesn't support cancellation directly. As a workaround:
 
 ---
 
-## Issue 3: Migration precheck fails with error
+## Problem 3: Migration precheck fails with error
 
 **Error message:**
 
@@ -74,7 +74,7 @@ The extension doesn't support cancellation directly. As a workaround:
 
 ---
 
-## Issue 4: Static IP configuration isn't preserved without guest credentials
+## Problem 4: Static IP configuration isn't preserved without guest credentials
 
 **Scenario:**
 
@@ -120,21 +120,21 @@ Use the following workflow to preserve static IP configuration without providing
 
 ---
 
-## Issue 5: Synchronization fails due to an invalid Change ID
+## Problem 5: Synchronization fails due to an invalid Change ID
 
 **Error Message:**
 
 > The generated Change ID is invalid. Please verify the Change ID and try again.
 
-**When This Issue Occurs:**
+**When This Problem Occurs:**
 
-This issue occurs during **synchronization** when the VM Conversion extension can't retrieve or validate the **Change ID** for one or more virtual disks on the source VMware virtual machine.
+This problem occurs during **synchronization** when the VM Conversion extension can't retrieve or validate the **Change ID** for one or more virtual disks on the source VMware virtual machine.
 
 The VM Conversion extension relies on **VMware Changed Block Tracking (CBT)** to identify incremental disk changes. If the Change ID is missing, stale, or invalid, synchronization can't continue.
 
 **Possible Causes:**
 
-This issue can occur for one or more of the following reasons:
+This problem can occur for one or more of the following reasons:
 
 - Changed Block Tracking (CBT) is disabled or not fully enabled on the source virtual machine.
 - Snapshot-related problems, including:
@@ -164,7 +164,7 @@ Before retrying synchronization, verify the following checks:
 1. Review recent virtual machine operations:
    - Check for recent storage migrations, disk changes, or restore operations.
 
-**How to Fix the Issue:**
+**How to Fix the Promblem:**
 
 If synchronization fails due to an invalid Change ID, regenerate CBT metadata on the source VMware virtual machine using one of the following methods.
 
