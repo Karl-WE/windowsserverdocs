@@ -164,7 +164,7 @@ Before retrying synchronization, verify the following checks:
 1. Review recent virtual machine operations:
    - Check for recent storage migrations, disk changes, or restore operations.
 
-**How to Fix the Promblem:**
+**How to Fix the Problem:**
 
 If synchronization fails due to an invalid Change ID, regenerate CBT metadata on the source VMware virtual machine using one of the following methods.
 
