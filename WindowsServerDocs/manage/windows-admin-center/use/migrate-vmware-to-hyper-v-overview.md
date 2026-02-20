@@ -1,13 +1,13 @@
 ---
-title: Overview of VMware to Hyper-V migration in Windows Admin Center (Preview)
-description: Learn about the VM Conversion extension for Windows Admin Center, which enables migration of VMware virtual machines to Hyper-V with minimal downtime.
+title: VM Conversion Extension in Windows Admin Center (Preview)
+description: Discover the VM Conversion extension for Windows Admin Center. Migrate VMware VMs to Hyper-V with ease, ensuring minimal downtime and seamless transitions.
 author: robinharwood
 ms.topic: overview
 ms.date: 08/13/2025
 ms.author: roharwoo
 ms.reviewer: shsathee,pmiddha
 ---
-# Overview of VMware to Hyper-V migration in Windows Admin Center (Preview)
+# VM Conversion extension in Windows Admin Center (Preview)
 
 > [!IMPORTANT]
 > The VM Conversion extension is currently in PREVIEW.
@@ -16,7 +16,7 @@ ms.reviewer: shsathee,pmiddha
 > As a preview extension, the VM Conversion extension is governed by the [Windows Admin Center prerelease extension software license terms](/legal/windows-server/windows-admin-center/windows-pre-release-extension-eula).
 > Microsoft isn't obligated under this agreement to provide any support services for the software. Issues, questions, and feedback not covered in this documentation can be filed [here](https://github.com/MicrosoftDocs/Windows-Admin-Center-Ideas-and-Feedback).
 
-The **VM Conversion extension** for Windows Admin Center enables you to migrate VMware virtual machines from vCenter to Hyper-V. This lightweight tool provides online replication with minimal downtime for both Windows and Linux virtual machines. The extension is easy to set up and is available at no extra cost to customers.
+The VM Conversion extension for Windows Admin Center enables you to migrate VMware virtual machines from vCenter to Hyper-V. This lightweight tool provides online replication with minimal downtime for both Windows and Linux virtual machines. The extension is easy to set up and available at no extra cost.
 
 ## Key features
 
@@ -50,36 +50,40 @@ The VM Conversion extension provides the following capabilities:
 
 ## How it works
 
-The VM Conversion extension uses a synchronization and migration workflow to move virtual machines from VMware to Hyper-V with minimal downtime.
+The VM Conversion extension uses a synchronization and migration workflow to move virtual machines from VMware to Hyper-V with minimal downtime. The conversion process has two main phases:
+
+1. **Synchronization**: The extension does an initial full copy of the virtual machine's disks while the source VM keeps running. This phase minimizes downtime by letting you schedule the final migration at a convenient time.
+
+1. **Migration**: The extension uses Change Block Tracking (CBT) to find and replicate only the changed blocks since the last synchronization. During cutover, the source VM is powered off, and a final delta sync captures any remaining changes before importing the VM into Hyper-V.
+
+The following diagram shows the supported scenario topology for VM migration from VMware vCenter to Hyper-V through Windows Admin Center:
 
 :::image type="content" source="media/migrate-vmware-to-hyper-v-overview/supported-scenario-topology.png" alt-text="Diagram showing the supported scenario topology for VM migration from VMware vCenter to Hyper-V through Windows Admin Center.":::
 
-The conversion process consists of two main phases:
+### Synchronization
 
-### Phase 1: Synchronization
+During synchronization, the extension connects to your vCenter environment and does an initial full copy of the virtual machine's disks while the source VM keeps running. During this phase, the extension does the following actions:
 
-The extension connects to your vCenter environment and performs an initial full copy of the virtual machine's disks. During this phase:
+- Creates a snapshot on the source VM to track changes.
+- Copies the virtual disk data to the destination Hyper-V host.
+- Creates a Hyper-V Virtual Hard Disk (VHDX) file at the specified location.
 
-- A snapshot is created on the source VM to track changes.
-- The virtual disk data is copied to the destination Hyper-V host.
-- A Hyper-V Virtual Hard Disk (VHDX) file is created at the specified location.
-- The source VM continues to run during synchronization.
+### Migration
 
-### Phase 2: Migration
-
-The extension uses Change Block Tracking (CBT) to identify and replicate only the changed blocks. This approach:
+During migration, the extension uses Change Block Tracking (CBT) to identify and replicate only the changed blocks since the last synchronization. This approach offers the following benefits:
 
 - Minimizes the amount of data transferred during the final migration.
 - Reduces the cutover window significantly.
-- Allows you to schedule the final migration at a convenient time.
+- Enables you to schedule the final migration at a convenient time.
 
-When you're ready to complete the migration:
+When you're ready to complete the migration, the extension takes the following steps:
 
-- A delta sync captures any remaining changes.
-- The source VM is powered off.
-- A final delta captures any remaining changes during cut over windows.
-- The VM is imported into Hyper-V with the correct configuration.
-- The migrated VM is ready to use on Hyper-V.
+- Performs a delta sync to capture any remaining changes since the last synchronization.
+- Powers off the source VM to ensure data consistency.
+- Performs a final delta sync to capture any remaining changes during the cutover window.
+- Imports the VM into Hyper-V with the correct configuration, including CPU, memory, and network settings.
+
+After the migration finishes, you can use the migrated VM on Hyper-V.
 
 > [!NOTE]
 > **Best practice:** Deploy the Windows Admin Center gateway in the same site as the ESXi and Hyper-V hosts for VM conversion. This deployment ensures minimal WAN traffic, lower latency, and a reliable migration experience.
@@ -88,48 +92,39 @@ When you're ready to complete the migration:
 
 The VM Conversion extension supports the following migration scenarios:
 
-### Datacenter modernization
+- **Datacenter modernization:** Use the VM Conversion extension to migrate workloads from VMware to Hyper-V when modernizing your datacenter infrastructure. This scenario is common for organizations that want to:
 
-Organizations looking to modernize their datacenter infrastructure can use the VM Conversion extension to migrate workloads from VMware to Hyper-V. This scenario is common for organizations that want to:
+  - Consolidate their virtualization platform to reduce licensing costs.
+  - Simplify management by using a single hypervisor technology.
+  - Prepare for hybrid cloud deployments with Azure integration.
 
-- Consolidate their virtualization platform to reduce licensing costs.
-- Simplify management by using a single hypervisor technology.
-- Prepare for hybrid cloud deployments with Azure integration.
+- **Test and development environments:** Quickly migrate test and development environments from VMware to Hyper-V to validate workloads before production migration or to leverage Hyper-V-specific features.
 
-### Test and development environments
+- **Disaster recovery planning:** Use the VM Conversion extension as part of your disaster recovery strategy to create Hyper-V-based replicas of VMware workloads.
 
-Quickly migrate test and development environments from VMware to Hyper-V to validate workloads before production migration or to leverage Hyper-V-specific features.
+## vCenter versions and guest operating systems
 
-### Disaster recovery planning
+You can use the extension with VMware vCenter versions 6.x, 7.x, and 8.x.
 
-Use the VM Conversion extension as part of your disaster recovery strategy to create Hyper-V-based replicas of VMware workloads.
+The VM Conversion extension can migrate virtual machines running the following operating systems:
 
-## Supported versions and operating systems
+- Windows operating systems:
 
-### Supported vCenter versions
+  - Windows Server 2025, 2022, 2022 Azure Edition, 2019, 2016, 2012 R2
 
-The extension supports VMware vCenter versions 6.x, 7.x, and 8.x.
+  - Windows 10 and  Windows 11
 
-### Supported guest operating systems
+- Debian-based operating systems:
 
-The following operating systems can use the VM Conversion extension:
+  - Ubuntu Linux
+  - Ubuntu 20.04, 24.04
+  - Debian 11, 12
 
-**Windows operating systems:**
+- RHEL-based operating systems:
 
-- Windows Server 2025, 2022, 2022 Azure Edition, 2019, 2016, 2012 R2
-- Windows 10
-
-**Debian-based operating systems:**
-
-- Ubuntu Linux
-- Ubuntu 20.04, 24.04
-- Debian 11, 12
-
-**RHEL-based operating systems:**
-
-- Alma Linux
-- CentOS
-- Red Hat Linux 9.0
+  - Alma Linux
+  - CentOS
+  - Red Hat Linux 9.0
 
 > [!IMPORTANT]
 > For Linux guests, you must install Hyper-V drivers before starting migration. The Hyper-V drivers are essential to ensure successful post-migration boot.

@@ -1,6 +1,6 @@
 ---
-title: Troubleshooting guide for VM Conversion Extension in Windows Admin Center (Preview)
-description: Troubleshoot VM Conversion Extension problems in Windows Admin Center. Fix migration errors, static IP issues, and synchronization failures with this guide.
+title: Troubleshoot the VM Conversion Extension in Windows Admin Center (Preview)
+description: Resolve VMware to Hyper-V migration problems using the VM Conversion Extension. Diagnose and fix errors, stuck migrations, and network configuration issues.
 #customer intent: As a virtualization administrator, I want to troubleshoot VM conversion issues in Windows Admin Center so that I can successfully migrate VMware virtual machines to Hyper-V.
 ms.date: 01/06/2026
 ms.topic: troubleshooting
@@ -9,7 +9,7 @@ ms.author: pmiddha
 ms.reviewer: shsathee,pmiddha
 ---
 
-# Troubleshooting guide for VM Conversion Extension in Windows Admin Center (Preview)
+# Troubleshoot the VM Conversion extension in Windows Admin Center (Preview)
 
 > [!IMPORTANT]
 > The VM Conversion extension is currently in PREVIEW.

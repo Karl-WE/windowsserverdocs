@@ -1,6 +1,6 @@
 ### YamlMime:FAQ
 metadata:
-  title: Migrate VMware Virtual Machines to Hyper-V using Windows Admin Center Frequently Asked Questions (Preview)
+  title: VM Conversion extension in Windows Admin Center Frequently Asked Questions (Preview)
   description: Get answers to frequently asked questions about migrating VMware virtual machines to Hyper-V with Windows Admin Center (Preview).
   author: robinharwood
   ms.author: roharwoo
@@ -8,7 +8,7 @@ metadata:
   ms.date: 02/05/2026
   ms.reviewer: shsathee,pmiddha
 
-title: "Migrate VMware Virtual Machines to Hyper-V Frequently Asked Questions (Preview)"
+title: "VM Conversion extension in Windows Admin Center Frequently Asked Questions (Preview)"
 summary: |
   > [!IMPORTANT]
   > The VM Conversion extension is currently in PREVIEW.
@@ -17,7 +17,7 @@ summary: |
   > As a preview extension, the VM Conversion extension is governed by the [Windows Admin Center prerelease extension software license terms](/legal/windows-server/windows-admin-center/windows-pre-release-extension-eula).
   > Microsoft isn't obligated under this agreement to provide any support services for the software. Issues, questions, and feedback not covered in this documentation can be filed [here](https://github.com/MicrosoftDocs/Windows-Admin-Center-Ideas-and-Feedback).
 
-  Here are answers to the most commonly asked questions about Migrate VMware Virtual Machines to Hyper-V.
+  Here are answers to the most commonly asked questions about migrating VMware virtual machines to Hyper-V using the VM Conversion extension in Windows Admin Center.
 
 sections:
   - name: Ignored

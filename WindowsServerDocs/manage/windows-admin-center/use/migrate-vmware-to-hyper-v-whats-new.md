@@ -1,5 +1,5 @@
 ---
-title: "Whats new in VM Conversion Extension for Windows Admin Center (Preview)"
+title: "Whats new in the VM Conversion Extension for Windows Admin Center (Preview)"
 description: Discover the latest features and enhancements in the VM Conversion Extension for Windows Admin Center (Preview) to improve security, performance, and flexibility.
 #customer intent: As a virtualization administrator, I want to understand the new features in the VM Conversion Extension so that I can optimize my virtual machine migration process.
 author: pmiddha
@@ -10,7 +10,14 @@ ms.reviewer: shsathee,pmiddha
 
 ---
 
-# What's new in VM Conversion Extension for Windows Admin Center (Preview)
+# What's new in the VM Conversion extension for Windows Admin Center (Preview)
+
+> [!IMPORTANT]
+> The VM Conversion extension is currently in PREVIEW.
+> This document provides information about a prerelease product that might change substantially before its release. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+>
+> As a preview extension, the VM Conversion extension is governed by the [Windows Admin Center prerelease extension software license terms](/legal/windows-server/windows-admin-center/windows-pre-release-extension-eula).
+> Microsoft isn't obligated under this agreement to provide any support services for the software. Issues, questions, and feedback not covered in this documentation can be filed [here](https://github.com/MicrosoftDocs/Windows-Admin-Center-Ideas-and-Feedback).
 
 This article provides release notes for the VM Conversion Extension in Windows Admin Center. Use these notes to learn about new features, enhancements, and bug fixes in each version.
 
@@ -18,7 +25,34 @@ The VM Conversion Extension helps you migrate VMware virtual machines to Hyper-V
 
 ---
 
-## [Version 1.8.6](https://dev.azure.com/WindowsAdminCenter/Windows%20Admin%20Center%20Feed/_artifacts/feed/wac-public-extensions/NuGet/msft.sme.vm-conversion/overview/1.8.6) (January 2026)
+## Version 1.13.7
+
+_Released February 2026_
+
+Download link: [Version 1.13.7](https://dev.azure.com/WindowsAdminCenter/Windows%20Admin%20Center%20Feed/_artifacts/feed/wac-public-extensions/NuGet/msft.sme.vm-conversion/overview/1.13.7)
+
+## Bug fixes - Version 1.13.7
+
+- Addressed a migration issue where **migration getting stuck at 25% due to lost vCenter connection**.
+
+- Resolved an issue where a **migration failure caused in-progress synchronizations to fail**.
+
+- Fixed the synchronization error: `Requested Registry key access is not allowed.`
+
+- Addressed a **migration error during destination VM creation**. For example, when migrating VM `abcdef`, the following error could occur:
+
+   ```description
+   Failed to create destination VM: Fatal error:
+   Failed to configure network for VM 'abcdef'.
+   Error: The property 'Name' cannot be found on this object.
+   Verify that the property exists. (91%)
+   ```
+
+## Version 1.8.6
+
+_Released January 2026_
+
+Download link: [Version 1.8.6](https://dev.azure.com/WindowsAdminCenter/Windows%20Admin%20Center%20Feed/_artifacts/feed/wac-public-extensions/NuGet/msft.sme.vm-conversion/overview/1.8.6)
 
 ### Improvements
 
@@ -26,7 +60,7 @@ The VM Conversion Extension helps you migrate VMware virtual machines to Hyper-V
 
 - Enhanced VM creation to correctly refresh and apply CPU, memory, and operating system settings when values are incomplete or invalid.
 
-### Bug fixes - Version 1.8.6
+### Bug fixes
 
 - Fixed an issue that could block migrations when required change tracking information was missing.
 
@@ -36,7 +70,11 @@ The VM Conversion Extension helps you migrate VMware virtual machines to Hyper-V
 
 ---
 
-## [Version 1.8.5](https://dev.azure.com/WindowsAdminCenter/Windows%20Admin%20Center%20Feed/_artifacts/feed/wac-public-extensions/NuGet/msft.sme.vm-conversion/overview/1.8.5) (December 2025)
+## Version 1.8.5
+
+_Released December 2025_
+
+Download link: [Version 1.8.5](https://dev.azure.com/WindowsAdminCenter/Windows%20Admin%20Center%20Feed/_artifacts/feed/wac-public-extensions/NuGet/msft.sme.vm-conversion/overview/1.8.5)
 
 ### New features and enhancements
 
@@ -71,7 +109,7 @@ The VM Conversion Extension helps you migrate VMware virtual machines to Hyper-V
 - Reduced the VM synchronization and migration limit from 50 to 10 to improve reliability.
 - Updated corresponding error and guidance messages to reflect the new threshold.
 
-### Bug fixes - Version 1.8.5
+### Bug fixes
 
 - Fixed an issue where powering on a VM resulted in the error: 'Validation failed for one or more fields.'
 - Resolved an issue causing the error: 'Failed to create destination VM: cpuCount must be a positive number.'
@@ -79,7 +117,11 @@ The VM Conversion Extension helps you migrate VMware virtual machines to Hyper-V
 
 ---
 
-## [Version 1.8.3](https://dev.azure.com/WindowsAdminCenter/Windows%20Admin%20Center%20Feed/_artifacts/feed/wac-public-extensions/NuGet/msft.sme.vm-conversion/overview/1.8.3) (October 2025)
+## Version 1.8.3
+
+_Released October 2025_
+
+Download link: [Version 1.8.3](https://dev.azure.com/WindowsAdminCenter/Windows%20Admin%20Center%20Feed/_artifacts/feed/wac-public-extensions/NuGet/msft.sme.vm-conversion/overview/1.8.3)
 
 ### New features and enhancements
 
@@ -90,13 +132,18 @@ The VM Conversion Extension helps you migrate VMware virtual machines to Hyper-V
 #### Migration workflow improvements
 - Improved stability, validation, and error handling for a smoother migration experience.
 
-### Bug fixes - Version 1.8.3
+### Bug fixes
+
 - Fixed an issue where the **Submit** button in the vCenter credentials dialog could remain disabled after a failure.  
 - Resolved a problem where migrations could get stuck at **80% progress**.  
 
 ---
 
-## [Version 1.8.2](https://dev.azure.com/WindowsAdminCenter/Windows%20Admin%20Center%20Feed/_artifacts/feed/wac-public-extensions/NuGet/msft.sme.vm-conversion/overview/1.8.2) (October 2025)
+## Version 1.8.2
+
+_Released October 2025_
+
+Download link: [Version 1.8.2](https://dev.azure.com/WindowsAdminCenter/Windows%20Admin%20Center%20Feed/_artifacts/feed/wac-public-extensions/NuGet/msft.sme.vm-conversion/overview/1.8.2)
 
 ### New features
 
@@ -116,7 +163,11 @@ The VM Conversion Extension helps you migrate VMware virtual machines to Hyper-V
 
 ---
 
-## [Version 1.8.0](https://dev.azure.com/WindowsAdminCenter/Windows%20Admin%20Center%20Feed/_artifacts/feed/wac-public-extensions/NuGet/msft.sme.vm-conversion/overview/1.8.0)  (September 2025)
+## Version 1.8.0
+
+_Released September 2025_
+
+Download link: [Version 1.8.0](https://dev.azure.com/WindowsAdminCenter/Windows%20Admin%20Center%20Feed/_artifacts/feed/wac-public-extensions/NuGet/msft.sme.vm-conversion/overview/1.8.0)
 
 ### New features
 
@@ -154,7 +205,7 @@ The VM Conversion Extension helps you migrate VMware virtual machines to Hyper-V
 
     During synchronization, you create VM disks as **thick (fixed)** or **thin (dynamic)** to match the **source VM’s configuration**, optimizing storage use, and simplifying post-migration management.
 
-### Bug fixes - Version 1.8.0
+### Bug fixes
 
 - Resolved migration error: *Physical network adapter 'Ethernet' not found*.  
 - Corrected VM listing problem where the extension incorrectly marked VMs as failed when they were already present in **Hyper-V Manager**.    

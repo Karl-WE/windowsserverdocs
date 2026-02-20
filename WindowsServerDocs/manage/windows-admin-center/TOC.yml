@@ -65,17 +65,17 @@
       href: use/logging.md
     - name: Manage AWS Machines
       href: use/manage-aws-machines.md
-    - name: Migrate VMware virtual machines to Hyper-V (preview)
+    - name: VM Conversion extension (preview)
       items:
-      - name: Overview
+      - name: VM Conversion extension overview
         href: use/migrate-vmware-to-hyper-v-overview.md
-      - name: How To
+      - name: Migrate virtual machines
         href: use/migrate-vmware-to-hyper-v-how-to.md
-      - name: Troubleshooting
+      - name: Troubleshoot the VM Conversion extension
         href: use/migrate-vmware-to-hyper-v-troubleshoot.md
-      - name: What's new
+      - name: What's new in the VM Conversion extension
         href: use/migrate-vmware-to-hyper-v-whats-new.md
-      - name: FAQ
+      - name: VM Conversion extension FAQ
         href: use/migrate-vmware-to-hyper-v-faq.yml
     - name: Virtualization Mode (preview)
       items:

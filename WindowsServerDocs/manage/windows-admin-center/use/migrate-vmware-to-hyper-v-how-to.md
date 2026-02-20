@@ -1,6 +1,6 @@
 ---
-title: Migrate VMware VMs to Hyper-V in Windows Admin Center (Preview)
-description: Learn how to install and use the VM Conversion extension to migrate VMware virtual machines to Hyper-V using Windows Admin Center.
+title: Migrate virtual machines using the VM Conversion Extension in Windows Admin Center (Preview)
+description: Discover how to install and use the VM Conversion extension to seamlessly migrate VMware VMs to Hyper-V with Windows Admin Center.
 author: pmiddha
 ms.topic: how-to
 ms.date: 08/13/2025
@@ -8,7 +8,7 @@ ms.author: pmiddha
 ms.reviewer: shsathee,pmiddha
 #customer intent: As a virtualization administrator, I want to migrate VMware virtual machines to Hyper-V so that I can consolidate my virtualization infrastructure.
 ---
-# Migrate VMware VMs to Hyper-V in Windows Admin Center (Preview)
+# Migrate virtual machines using the VM Conversion Extension in Windows Admin Center (Preview)
 
 > [!IMPORTANT]
 > The VM Conversion extension is currently in PREVIEW.
@@ -25,52 +25,27 @@ For an overview of the VM Conversion extension, including key features and suppo
 
 Before you begin, review the prerequisites and make sure your environment meets the requirements.
 
-### Windows Admin Center Gateway prerequisites
+- VMware vCenter version, 6.x, 7.x, or 8.x.
 
-- Install PowerCLI.
+- Ensure that the Hyper-V role is installed on the target Hyper-V host.
 
-    - Open **PowerShell** as an administrator.
+- Review the [supported guest operating systems](migrate-vmware-to-hyper-v-overview.md#supported-versions-and-operating-systems) to ensure the VMs you're migrating are compatible.
 
-    - Run the following command to install the PowerCLI module:
+On the Windows Admin Center Gateway machine, ensure you have the following:
 
-    ```powershell
-    Install-Module -Name VMware.PowerCLI
-    ```
+- Administrator privileges, or equivalent, to install the extension and perform migrations.
 
-    - Verify that the module is installed:
+- Windows Admin Center Gateway version `2410` build number `2.4.12.10` or later.
 
-    ```powershell
-    Get-Module -Name VMware.PowerCLI -ListAvailable
-    ```
+- The latest version of PowerCLI installed. To download and install PowerCLI, see the [PowerCLI Installation Guide](https://developer.broadcom.com/powercli/installation-guide).
 
-    - Test the connection to a vCenter Server by running:
+- [VMware Virtual Disk Development Kit (VDDK) version 8.0.3](https://developer.broadcom.com/sdks/vmware-virtual-disk-development-kit-vddk/latest/) downloaded and extracted to the directory: `C:\Program Files\WindowsAdminCenter\Service\VDDK`. Ensure you download **VDDK version 8.0.3** specifically. Other versions aren't supported.
 
-    ```powershell
-    Connect-VIServer -Server "<vCenterServerFQDN_or_IP>" -User "<username>" -Password "<password>" -Force
-    ```
+- [Visual Studio 2015 (VC++ 14.0) Redistributable](/cpp/windows/latest-supported-vc-redist?view=msvc-170#visual-studio-2015-vc-140-no-longer-supported) and [Visual C++ Redistributable Packages for Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40784) installed.
 
-    > [!NOTE]
-    > Replace `<vCenterServerFQDN_or_IP>`, `<username>`, and `<password>` with your actual vCenter credentials.
+## Install the VM Conversion extension
 
-
-- Install:
-  - [Microsoft Visual C++ Redistributable](/cpp/windows/latest-supported-vc-redist)
-  - [Visual C++ Redistributable Packages for Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40784)
-
-- Download [VMware Virtual Disk Development Kit (VDDK) version 8.0.3](https://developer.broadcom.com/sdks/vmware-virtual-disk-development-kit-vddk/latest/). Extract the contents, and copy to the directory: *'C:\Program Files\WindowsAdminCenter\Service\VDDK'*.
-
-    > [!NOTE]
-    > Ensure you download **VDDK version 8.0.3** specifically. Other versions aren't supported.
-
-- Ensure that the Hyper-V role is installed. This setting is typically enabled by default.
-
-- [Use Windows Admin Center Gateway V2](https://aka.ms/downloadWAC) – version `2410` build number `2.4.12.10`
-
-For supported vCenter versions and guest operating systems, see [Overview of VMware to Hyper-V migration](migrate-vmware-to-hyper-v-overview.md#supported-versions-and-operating-systems).
-
-## Install the VM Conversion (Preview) extension in Windows Admin Center
-
-Complete the following steps to install the **VM Conversion** extension.
+Complete the following steps to install the **VM Conversion** extension:
 
 1. Open Windows Admin Center.
 
@@ -80,17 +55,25 @@ Complete the following steps to install the **VM Conversion** extension.
 
 1. Search for **VM Conversion (Preview)** in **Available extensions** and select **Install**.
 
-    :::image type="content" source="media/migrate-vmware-to-hyper-v-overview/vm-conversion-available-extensions.png" alt-text="Screenshot of the VM Conversion (Preview) extension in the list of all Available extensions." lightbox="media/migrate-vmware-to-hyper-v-overview/vm-conversion-available-extensions.png":::
+    :::image type="content" source="media/migrate-vmware-to-hyper-v-overview/vm-conversion-available-extensions.png" alt-text="Screenshot of the VM Conversion extension in the list of all Available extensions." lightbox="media/migrate-vmware-to-hyper-v-overview/vm-conversion-available-extensions.png":::
 
 1. After installation, make sure the **VM Conversion** extension appears in Windows Admin Center under: **Installed Extensions** > **VM Conversion (Preview)**.
-
-1. Navigate to the Windows Admin Center home page by selecting the **Windows Admin Center** logo in the top-left corner.
-
-1. Select **+ Add**, then select **Server** or **Cluster** to add and connect to your Hyper-V host.
 
 ## Connect to vCenter
 
 When you first visit the extension, you need to connect your vSphere client endpoint.
+
+1. Go to the Windows Admin Center home page by selecting the **Windows Admin Center** logo in the top-left corner.
+
+1. Either connect to an existing Hyper-V server or cluster, or add a new Hyper-V server or cluster in Windows Admin Center. Choose one of the following options:
+
+    1. To connect to an existing Hyper-V server or cluster, select the server or cluster from the list on the Windows Admin Center home page.
+
+    Or
+
+    1. To add a new Hyper-V server or cluster, select **+ Add** and then select **Server** or **Cluster**. Follow the prompts to add and connect to your Hyper-V host.
+
+1. In the left panel, under **Extensions**, select **VM Conversion (Preview)**.
 
 1. Select **Connect to vCenter**.
 
@@ -100,11 +83,9 @@ When you first visit the extension, you need to connect your vSphere client endp
 
     :::image type="content" source="media/migrate-vmware-to-hyper-v-overview/configure-vmware-settings.png" alt-text="Screenshot showing how to configure VMware settings." lightbox="media/migrate-vmware-to-hyper-v-overview/configure-vmware-settings.png":::
 
-## Synchronize virtual machines using the VM Conversion (Preview) extension
+## Synchronize virtual machines
 
-### Synchronization prechecks
-
-Before you synchronize virtual machines, make sure the following requirements are met. The extension runs these prechecks automatically and reports any issues.
+Before you synchronize virtual machines, the extension automatically runs a set of prechecks and reports any problems. These prechecks verify that:
 
 - No active snapshots exist on the virtual machine.
 - VMware PowerCLI is installed on the Windows Admin Center Gateway machine.
@@ -114,9 +95,7 @@ Before you synchronize virtual machines, make sure the following requirements ar
 - Destination Hyper-V host has sufficient memory and disk space.
 - Change Block Tracking (CBT) is supported on the VM.
 
-### Synchronize virtual machines
-
-Complete the following steps to synchronize VMware virtual machines in Windows Admin Center.
+To synchronize virtual machines, complete the following steps:
 
 1. Connect to the Hyper-V server in Windows Admin Center that you want the VM to be migrated.
 
@@ -126,19 +105,18 @@ Complete the following steps to synchronize VMware virtual machines in Windows A
 
     :::image type="content" source="media/migrate-vmware-to-hyper-v-overview/bulk-vm-selection-for-synchronization.png" alt-text="Screenshot of the synchronize tab." lightbox="media/migrate-vmware-to-hyper-v-overview/bulk-vm-selection-for-synchronization.png":::
 
-1. In the Synchronize VM window, enter in the **Path to store data**. Select **Synchronize**.
+1. In the Synchronize VM window, enter the **Path to store data**. Select **Synchronize**.
 
     :::image type="content" source="media/migrate-vmware-to-hyper-v-overview/synchronize-vm-path-selection.png" alt-text="Screenshot of the dialog to enter the path to store data and confirm the synchronization can start." lightbox="media/migrate-vmware-to-hyper-v-overview/synchronize-vm-path-selection.png":::
 
-1. You see notifications appear with the progress for: running prechecks, preparing the environment, creating a snapshot, and finalizing synchronization. Confirm that the Hyper-V Virtual Hard Disk (VHDX) file is created in the folder path specified.
+1. You see notifications appear with the progress for: running prechecks, preparing the environment, creating a snapshot, and finalizing synchronization. Confirm that the Hyper-V Virtual Hard Disk (VHDX) file is created in the folder path you specified.
 
     :::image type="content" source="media/migrate-vmware-to-hyper-v-overview/synchronization-in-progress.png" alt-text="Screenshot of the notifications that appear while the synchronization is in progress." lightbox="media/migrate-vmware-to-hyper-v-overview/synchronization-in-progress.png":::
 
 1. Wait for the sync to complete.
 
-## Migrate virtual machines using the VM Conversion (Preview) extension
+## Migrate virtual machines
 
-### Migration prechecks
 Before migration begins, the extension automatically runs a set of prechecks. These prechecks verify:
 
 - The destination Hyper-V host has enough available vCPUs.
@@ -147,15 +125,13 @@ Before migration begins, the extension automatically runs a set of prechecks. Th
 - The synchronized `.vhdx` file exists at the specified destination storage path on the Hyper-V host.
 - The virtual machine has no active snapshots.
 
-### Migrate virtual machines
-
-Complete the following steps to migrate VMware virtual machines to Hyper-V in Windows Admin Center.
+To migrate virtual machines, complete the following steps:
 
 1. Go to the **Migrate** tab, and select the VM to migrate. Select **Migrate**.
 
     :::image type="content" source="media/migrate-vmware-to-hyper-v-overview/vm-selection-for-migration.png" alt-text="Screenshot of the migrate tab and virtual machines selected to migrate." lightbox="media/migrate-vmware-to-hyper-v-overview/vm-selection-for-migration.png":::
 
-1. In the Migrate VM window, select **Proceed** to start the migration.
+1. In the **Migrate VM** window, select **Proceed** to start the migration.
 
     :::image type="content" source="media/migrate-vmware-to-hyper-v-overview/confirm-migration.png" alt-text="Screenshot of the dialog confirming that the migration can start." lightbox="media/migrate-vmware-to-hyper-v-overview/confirm-migration.png":::
 
@@ -172,7 +148,8 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
     > migration might pause or stop progressing.
 
 ## View logs
-During synchronization and migration, you can view logs in the following locations to help troubleshoot any issues that arise:
+
+During synchronization and migration, view logs in the following locations to help troubleshoot any problems that arise:
 
 - [Browser console logs](#browser-console-logs)
 - [Event viewer logs](#event-viewer-logs)
@@ -188,13 +165,13 @@ Browser console logs are useful for identifying any failing API calls from Windo
 
 ### Event viewer logs
 
-Event Viewer logs capture server-side errors and warnings from the Windows Admin Center gateway, including authentication issues, service failures, and extension errors. To view the Event Viewer logs for Windows Admin Center, follow these steps:
+Event Viewer logs capture server-side errors and warnings from the Windows Admin Center gateway, including authentication problems, service failures, and extension errors. To view the Event Viewer logs for Windows Admin Center, follow these steps:
 
 1. On the Windows Admin Center server, open **Event Viewer**.
 1. Expand **Applications and Services Logs** in the left pane.
 1. Select **WindowsAdminCenter**.
 1. Filter and review logs for **Errors**, **Warnings**, and **Informational** messages relevant to the VM Conversion extension.
-1. Look for events with the source **WebREST** and Event ID **422** for VM conversion-related issues.
+1. Look for events with the source **WebREST** and Event ID **422** for VM conversion-related problems.
 
 ### VM conversion logs
 
