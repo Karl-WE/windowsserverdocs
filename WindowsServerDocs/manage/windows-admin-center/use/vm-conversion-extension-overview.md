@@ -58,7 +58,7 @@ The VM Conversion extension uses a synchronization and migration workflow to mov
 
 The following diagram shows the supported scenario topology for VM migration from VMware vCenter to Hyper-V through Windows Admin Center:
 
-:::image type="content" source="media/migrate-vmware-to-hyper-v-overview/supported-scenario-topology.png" alt-text="Diagram showing the supported scenario topology for VM migration from VMware vCenter to Hyper-V through Windows Admin Center.":::
+:::image type="content" source="media/vm-conversion-extension-overview/supported-scenario-topology.png" alt-text="Diagram showing the supported scenario topology for VM migration from VMware vCenter to Hyper-V through Windows Admin Center.":::
 
 ### Synchronization
 
@@ -131,7 +131,7 @@ The VM Conversion extension can migrate virtual machines running the following o
 
 ## Related content
 
-- [Migrate VMware VMs to Hyper-V in Windows Admin Center](migrate-vmware-to-hyper-v-how-to.md)
-- [Troubleshoot VM Conversion Extension](migrate-vmware-to-hyper-v-troubleshoot.md)
-- [What's new in VM Conversion Extension](migrate-vmware-to-hyper-v-whats-new.md)
-- [VMware to Hyper-V migration FAQ](migrate-vmware-to-hyper-v-faq.yml)
+- [Migrate VMware VMs to Hyper-V in Windows Admin Center](migrate-virtual-machines-vm-conversion-extension.md)
+- [Troubleshoot VM Conversion Extension](troubleshoot-vm-conversion-extension.md)
+- [What's new in VM Conversion Extension](whats-new-vm-conversion-extension.md)
+- [VMware to Hyper-V migration FAQ](vm-conversion-extension-faq.yml)

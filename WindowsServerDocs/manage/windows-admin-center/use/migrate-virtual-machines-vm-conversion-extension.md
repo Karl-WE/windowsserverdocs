@@ -19,7 +19,7 @@ ms.reviewer: shsathee,pmiddha
 
 This article describes how to migrate VMware virtual machines to Hyper-V using the VM Conversion extension in Windows Admin Center. You learn how to install and configure the extension, synchronize virtual machines, and complete the migration.
 
-For an overview of the VM Conversion extension, including key features and supported scenarios, see [Overview of VMware to Hyper-V migration](migrate-vmware-to-hyper-v-overview.md).
+For an overview of the VM Conversion extension, including key features and supported scenarios, see [Overview of VMware to Hyper-V migration](vm-conversion-extension-overview.md).
 
 ## Prerequisites
 
@@ -29,7 +29,7 @@ Before you begin, review the prerequisites and make sure your environment meets 
 
 - Ensure that the Hyper-V role is installed on the target Hyper-V host.
 
-- Review the [supported guest operating systems](migrate-vmware-to-hyper-v-overview.md#supported-versions-and-operating-systems) to ensure the VMs you're migrating are compatible.
+- Review the [supported guest operating systems](vm-conversion-extension-overview.md#supported-versions-and-operating-systems) to ensure the VMs you're migrating are compatible.
 
 On the Windows Admin Center Gateway machine, ensure you have the following:
 
@@ -55,7 +55,7 @@ Complete the following steps to install the **VM Conversion** extension:
 
 1. Search for **VM Conversion (Preview)** in **Available extensions** and select **Install**.
 
-    :::image type="content" source="media/migrate-vmware-to-hyper-v-overview/vm-conversion-available-extensions.png" alt-text="Screenshot of the VM Conversion extension in the list of all Available extensions." lightbox="media/migrate-vmware-to-hyper-v-overview/vm-conversion-available-extensions.png":::
+    :::image type="content" source="media/migrate-virtual-machines-vm-conversion-extension/vm-conversion-available-extensions.png" alt-text="Screenshot of the VM Conversion extension in the list of all Available extensions." lightbox="media/migrate-virtual-machines-vm-conversion-extension/vm-conversion-available-extensions.png":::
 
 1. After installation, make sure the **VM Conversion** extension appears in Windows Admin Center under: **Installed Extensions** > **VM Conversion (Preview)**.
 
@@ -77,11 +77,11 @@ When you first visit the extension, you need to connect your vSphere client endp
 
 1. Select **Connect to vCenter**.
 
-    :::image type="content" source="media/migrate-vmware-to-hyper-v-overview/connect-to-v-center.png" alt-text="Screenshot of the connect to vCenter option." lightbox="media/migrate-vmware-to-hyper-v-overview/connect-to-v-center.png":::
+    :::image type="content" source="media/migrate-virtual-machines-vm-conversion-extension/connect-to-v-center.png" alt-text="Screenshot of the connect to vCenter option." lightbox="media/migrate-virtual-machines-vm-conversion-extension/connect-to-v-center.png":::
 
 1. Enter the vCenter FQDN, vCenter username, and vCenter password.
 
-    :::image type="content" source="media/migrate-vmware-to-hyper-v-overview/configure-vmware-settings.png" alt-text="Screenshot showing how to configure VMware settings." lightbox="media/migrate-vmware-to-hyper-v-overview/configure-vmware-settings.png":::
+    :::image type="content" source="media/migrate-virtual-machines-vm-conversion-extension/configure-vmware-settings.png" alt-text="Screenshot showing how to configure VMware settings." lightbox="media/migrate-virtual-machines-vm-conversion-extension/configure-vmware-settings.png":::
 
 ## Synchronize virtual machines
 
@@ -103,15 +103,15 @@ To synchronize virtual machines, complete the following steps:
 
 1. In the virtual machine list, select up to 10 virtual machines to synchronize.
 
-    :::image type="content" source="media/migrate-vmware-to-hyper-v-overview/bulk-vm-selection-for-synchronization.png" alt-text="Screenshot of the synchronize tab." lightbox="media/migrate-vmware-to-hyper-v-overview/bulk-vm-selection-for-synchronization.png":::
+    :::image type="content" source="media/migrate-virtual-machines-vm-conversion-extension/bulk-vm-selection-for-synchronization.png" alt-text="Screenshot of the synchronize tab." lightbox="media/migrate-virtual-machines-vm-conversion-extension/bulk-vm-selection-for-synchronization.png":::
 
 1. In the Synchronize VM window, enter the **Path to store data**. Select **Synchronize**.
 
-    :::image type="content" source="media/migrate-vmware-to-hyper-v-overview/synchronize-vm-path-selection.png" alt-text="Screenshot of the dialog to enter the path to store data and confirm the synchronization can start." lightbox="media/migrate-vmware-to-hyper-v-overview/synchronize-vm-path-selection.png":::
+    :::image type="content" source="media/migrate-virtual-machines-vm-conversion-extension/synchronize-vm-path-selection.png" alt-text="Screenshot of the dialog to enter the path to store data and confirm the synchronization can start." lightbox="media/migrate-virtual-machines-vm-conversion-extension/synchronize-vm-path-selection.png":::
 
 1. You see notifications appear with the progress for: running prechecks, preparing the environment, creating a snapshot, and finalizing synchronization. Confirm that the Hyper-V Virtual Hard Disk (VHDX) file is created in the folder path you specified.
 
-    :::image type="content" source="media/migrate-vmware-to-hyper-v-overview/synchronization-in-progress.png" alt-text="Screenshot of the notifications that appear while the synchronization is in progress." lightbox="media/migrate-vmware-to-hyper-v-overview/synchronization-in-progress.png":::
+    :::image type="content" source="media/migrate-virtual-machines-vm-conversion-extension/synchronization-in-progress.png" alt-text="Screenshot of the notifications that appear while the synchronization is in progress." lightbox="media/migrate-virtual-machines-vm-conversion-extension/synchronization-in-progress.png":::
 
 1. Wait for the sync to complete.
 
@@ -129,17 +129,17 @@ To migrate virtual machines, complete the following steps:
 
 1. Go to the **Migrate** tab, and select the VM to migrate. Select **Migrate**.
 
-    :::image type="content" source="media/migrate-vmware-to-hyper-v-overview/vm-selection-for-migration.png" alt-text="Screenshot of the migrate tab and virtual machines selected to migrate." lightbox="media/migrate-vmware-to-hyper-v-overview/vm-selection-for-migration.png":::
+    :::image type="content" source="media/migrate-virtual-machines-vm-conversion-extension/vm-selection-for-migration.png" alt-text="Screenshot of the migrate tab and virtual machines selected to migrate." lightbox="media/migrate-virtual-machines-vm-conversion-extension/vm-selection-for-migration.png":::
 
 1. In the **Migrate VM** window, select **Proceed** to start the migration.
 
-    :::image type="content" source="media/migrate-vmware-to-hyper-v-overview/confirm-migration.png" alt-text="Screenshot of the dialog confirming that the migration can start." lightbox="media/migrate-vmware-to-hyper-v-overview/confirm-migration.png":::
+    :::image type="content" source="media/migrate-virtual-machines-vm-conversion-extension/confirm-migration.png" alt-text="Screenshot of the dialog confirming that the migration can start." lightbox="media/migrate-virtual-machines-vm-conversion-extension/confirm-migration.png":::
 
     During the migration, the process performs the following steps: runs migration prechecks, ensures sufficient disk space, performs delta replication, powers off source VM, executes final delta sync, and imports VM into Hyper-V.
 
 1. Wait for virtual machine migration to complete.
 
-    :::image type="content" source="media/migrate-vmware-to-hyper-v-overview/migration-in-progress.png" alt-text="Screenshot of the progress of virtual machine migration." lightbox="media/migrate-vmware-to-hyper-v-overview/migration-in-progress.png":::
+    :::image type="content" source="media/migrate-virtual-machines-vm-conversion-extension/migration-in-progress.png" alt-text="Screenshot of the progress of virtual machine migration." lightbox="media/migrate-virtual-machines-vm-conversion-extension/migration-in-progress.png":::
 
 1. You can manage the migrated virtual machine using the Hyper-V Manager or Windows Admin Center.
 
@@ -182,7 +182,7 @@ VM conversion logs provide detailed information about the synchronization and mi
 
 ## Related content
 
-- [Overview of VMware to Hyper-V migration](migrate-vmware-to-hyper-v-overview.md)
-- [Troubleshoot VM Conversion Extension](migrate-vmware-to-hyper-v-troubleshoot.md)
-- [What's new in VM Conversion Extension](migrate-vmware-to-hyper-v-whats-new.md)
-- [VMware to Hyper-V migration FAQ](migrate-vmware-to-hyper-v-faq.yml)
+- [Overview of VMware to Hyper-V migration](vm-conversion-extension-overview.md)
+- [Troubleshoot VM Conversion Extension](troubleshoot-vm-conversion-extension.md)
+- [What's new in VM Conversion Extension](whats-new-vm-conversion-extension.md)
+- [VMware to Hyper-V migration FAQ](vm-conversion-extension-faq.yml)

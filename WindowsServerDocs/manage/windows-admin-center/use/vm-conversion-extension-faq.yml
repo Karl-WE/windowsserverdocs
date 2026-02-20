@@ -227,7 +227,7 @@ additionalContent: |
 
   To learn more, see the following articles:
 
-  - [Overview of VMware to Hyper-V migration](migrate-vmware-to-hyper-v-overview.md)
-  - [Migrate VMware Virtual Machines to Hyper-V in Windows Admin Center](migrate-vmware-to-hyper-v-how-to.md)
-  - [Troubleshoot VM Conversion Extension](migrate-vmware-to-hyper-v-troubleshoot.md)
-  - [What's new in VM Conversion Extension](migrate-vmware-to-hyper-v-whats-new.md)
+  - [Overview of VMware to Hyper-V migration](vm-conversion-extension-overview.md)
+  - [Migrate VMware Virtual Machines to Hyper-V in Windows Admin Center](migrate-virtual-machines-vm-conversion-extension.md)
+  - [Troubleshoot VM Conversion Extension](troubleshoot-vm-conversion-extension.md)
+  - [What's new in VM Conversion Extension](whats-new-vm-conversion-extension.md)

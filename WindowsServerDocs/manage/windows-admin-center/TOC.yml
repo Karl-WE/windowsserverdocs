@@ -68,15 +68,15 @@
     - name: VM Conversion extension (preview)
       items:
       - name: VM Conversion extension overview
-        href: use/migrate-vmware-to-hyper-v-overview.md
+        href: use/vm-conversion-extension-overview.md
       - name: Migrate virtual machines
-        href: use/migrate-vmware-to-hyper-v-how-to.md
+        href: use/migrate-virtual-machines-vm-conversion-extension.md
       - name: Troubleshoot the VM Conversion extension
-        href: use/migrate-vmware-to-hyper-v-troubleshoot.md
+        href: use/troubleshoot-vm-conversion-extension.md
       - name: What's new in the VM Conversion extension
-        href: use/migrate-vmware-to-hyper-v-whats-new.md
+        href: use/whats-new-vm-conversion-extension.md
       - name: VM Conversion extension FAQ
-        href: use/migrate-vmware-to-hyper-v-faq.yml
+        href: use/vm-conversion-extension-faq.yml
     - name: Virtualization Mode (preview)
       items:
       - name: Install Virtualization Mode

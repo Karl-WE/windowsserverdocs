@@ -155,7 +155,7 @@ Download link: [Version 1.8.2](https://dev.azure.com/WindowsAdminCenter/Windows%
 
 - **Quick Access to Documentation:**  
   The **“Open in New Window”** icon on the landing page now links directly to the official guide—
-  [Migrate VMware Virtual Machines to Hyper-V in Windows Admin Center (Preview)](../use/migrate-vmware-to-hyper-v-overview.md).
+  [Migrate VMware Virtual Machines to Hyper-V in Windows Admin Center (Preview)](../use/vm-conversion-extension-overview.md).
 
 ### Other improvements
 
@@ -195,7 +195,7 @@ Download link: [Version 1.8.0](https://dev.azure.com/WindowsAdminCenter/Windows%
     The migration process now preserves the BIOS UUID from the source VM, ensuring improved compatibility and identity synchronization on Hyper-V.
 
     >[!NOTE]
-    >Only the BIOS UUID is migrated. BIOS serial number format differs between VMware and Hyper-V, which can affect licensing checks. For more information, see [FAQ](migrate-vmware-to-hyper-v-faq.yml).
+    >Only the BIOS UUID is migrated. BIOS serial number format differs between VMware and Hyper-V, which can affect licensing checks. For more information, see [FAQ](vm-conversion-extension-faq.yml).
 
 - **Standardized Destination Folder Structure**
 
@@ -230,11 +230,11 @@ Download link: [Version 1.8.0](https://dev.azure.com/WindowsAdminCenter/Windows%
 
 - **Windows VMs** - VMware Tools batch uninstall is supported only for Windows VMs.  
 
-- **Licensing note** - Differences in BIOS Serial Number might affect licensing. See [FAQ](migrate-vmware-to-hyper-v-faq.yml) for details.
+- **Licensing note** - Differences in BIOS Serial Number might affect licensing. See [FAQ](vm-conversion-extension-faq.yml) for details.
 
 ## Related content
 
-- [Overview of VMware to Hyper-V migration](migrate-vmware-to-hyper-v-overview.md)
-- [Migrate VMware VMs to Hyper-V in Windows Admin Center](migrate-vmware-to-hyper-v-how-to.md)
-- [Troubleshoot VM Conversion Extension](migrate-vmware-to-hyper-v-troubleshoot.md)
-- [VMware to Hyper-V migration FAQ](migrate-vmware-to-hyper-v-faq.yml)
+- [Overview of VMware to Hyper-V migration](vm-conversion-extension-overview.md)
+- [Migrate VMware VMs to Hyper-V in Windows Admin Center](migrate-virtual-machines-vm-conversion-extension.md)
+- [Troubleshoot VM Conversion Extension](troubleshoot-vm-conversion-extension.md)
+- [VMware to Hyper-V migration FAQ](vm-conversion-extension-faq.yml)
