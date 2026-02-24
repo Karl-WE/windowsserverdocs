@@ -1,5 +1,5 @@
 ---
-title: sysmon
+title: Sysmon in Windows
 description: Learn how to use Sysmon, a Windows system service and device driver, to monitor and log system activity to the Windows event log. Explore syntax and examples.
 #customer intent: As a security analyst, I want to configure Sysmon with a custom configuration file so that I can tailor it to my organization's security needs.
 author: robinharwood
