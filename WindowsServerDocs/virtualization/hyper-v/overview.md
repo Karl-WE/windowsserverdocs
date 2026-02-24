@@ -109,6 +109,8 @@ A range of management tools and automation capabilities simplify operations and 
 
 - **Windows Admin Center** provides modern web-based management with hyperconverged infrastructure monitoring, performance analytics, and streamlined troubleshooting workflows accessible from any device.
 
+- **Windows Admin Center Virtualization Mode** is a dedicated virtualization-focused management experience built on Windows Admin Center, providing a streamlined interface optimized for managing Hyper-V environments. To learn more, see the [Windows Admin Center Virtualization Mode overview](/windows-server/manage/windows-admin-center/virtualization-mode-overview) and the [Introducing Windows Admin Center Virtualization Mode blog post](https://techcommunity.microsoft.com/blog/windowsservernewsandbestpractices/introducing-windows-admin-center-virtualization-mode-vmode/4471024).
+
 - **Hyper-V Manager** provides intuitive graphical management for day-to-day operations, while the Hyper-V module for Windows PowerShell enables advanced scripting and automation scenarios.
 
 - **System Center Virtual Machine Manager** delivers enterprise-scale management with automated provisioning, compliance monitoring, capacity planning, and self-service portals for delegated administration.
