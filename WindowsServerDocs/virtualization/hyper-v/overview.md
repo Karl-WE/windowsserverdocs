@@ -49,7 +49,7 @@ The following sections provide an overview into some of the key enterprise-grade
 
 ### Extensibility and integration
 
-An important aspect of Hyper-V is its extensibility and integration with other Windows Server features and other Microsoft and third-party products and services to create a comprehensive virtualization solution ready for enterprise deployments.
+An important aspect of Hyper-V is its extensibility and integration with other Windows Server features and other Microsoft and non-Microsoft products and services to create a comprehensive virtualization solution ready for enterprise deployments.
 
 For example, Hyper-V works seamlessly with Windows Server Failover Clustering to provide high availability, connects to a range of storage providers for flexible storage options, supports Azure integration for hybrid cloud scenarios, and integrates with Windows Admin Center or System Center Virtual Machine Manager for advanced management.
 
